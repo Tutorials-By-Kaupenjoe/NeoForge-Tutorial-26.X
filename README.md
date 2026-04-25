@@ -1,4 +1,4 @@
-<a href="https://www.youtube.com/playlist?list=PLKGarocXCE1FMoAF23TXkprPCuKmAdcTg" target="_blank">
+<a href="https://www.youtube.com/playlist?list=PLKGarocXCE1FMoAF23TXkprPCuKmAdcTg" target="_blank" rel="noopener noreferrer">
 <p align="center">
 <img width="1000" alt="neoforge-26x-github" src="https://github.com/user-attachments/assets/3bacfb37-206d-4049-8e15-37b6ed4982f1" />
 </p></a>
@@ -8,4 +8,4 @@ This is the GitHub Repository for Kaupenjoe's NeoForge Modding Tutorials For Min
 
 The Individual Tutorials are seperated into Branches for ease of access. 
 
-Watch the Tutorials here: <a href="https://www.youtube.com/playlist?list=PLKGarocXCE1FMoAF23TXkprPCuKmAdcTg" target="_blank">YouTube Playlist</a>
+Watch the Tutorials here: <a href="https://www.youtube.com/playlist?list=PLKGarocXCE1FMoAF23TXkprPCuKmAdcTg" target="_blank" rel="noopener noreferrer">YouTube Playlist</a>
