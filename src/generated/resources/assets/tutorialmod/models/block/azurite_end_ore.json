@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/cube_all",
+  "textures": {
+    "all": "tutorialmod:block/azurite_end_ore"
+  }
+}

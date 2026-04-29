@@ -2,7 +2,12 @@
   "item.tutorialmod.azurite": "Azurite",
   "item.tutorialmod.raw_azurite": "Raw Azurite",
 
-
+  "block.tutorialmod.azurite_block": "Block of Azurite",
+  "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",
+  "block.tutorialmod.azurite_ore": "Azurite Ore",
+  "block.tutorialmod.azurite_deepslate_ore": "Azurite Deepslate Ore",
+  "block.tutorialmod.azurite_nether_ore": "Azurite Nether Ore",
+  "block.tutorialmod.azurite_end_ore": "Azurite End Ore",
 
 
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",

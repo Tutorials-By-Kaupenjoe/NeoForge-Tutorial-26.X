@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod;
 
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
@@ -36,7 +37,7 @@ public class TutorialMod {
         ModCreativeModeTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
-
+        ModBlocks.register(modEventBus);
 
 
         NeoForge.EVENT_BUS.register(this);
@@ -55,6 +56,10 @@ public class TutorialMod {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.AZURITE);
             event.accept(ModItems.RAW_AZURITE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.AZURITE_BLOCK);
         }
     }
 
