@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod;
 
+import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import org.slf4j.Logger;
 
@@ -32,7 +33,10 @@ public class TutorialMod {
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
+        ModCreativeModeTabs.register(modEventBus);
+
         ModItems.register(modEventBus);
+
 
 
         NeoForge.EVENT_BUS.register(this);
