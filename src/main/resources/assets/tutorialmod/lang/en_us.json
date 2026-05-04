@@ -2,6 +2,10 @@
   "item.tutorialmod.azurite": "Azurite",
   "item.tutorialmod.raw_azurite": "Raw Azurite",
 
+  "item.tutorialmod.metal_detector": "Metal Detector",
+  "item.tutorialmod.metal_detector.no_valuables": "No Valuables Found!",
+
+
   "block.tutorialmod.azurite_block": "Block of Azurite",
   "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",
   "block.tutorialmod.azurite_ore": "Azurite Ore",
