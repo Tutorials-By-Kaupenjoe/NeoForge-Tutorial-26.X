@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "group": "azurite",
+  "ingredients": [
+    "tutorialmod:azurite_block",
+    "minecraft:blaze_powder"
+  ],
+  "result": {
+    "count": 18,
+    "id": "tutorialmod:azurite"
+  }
+}

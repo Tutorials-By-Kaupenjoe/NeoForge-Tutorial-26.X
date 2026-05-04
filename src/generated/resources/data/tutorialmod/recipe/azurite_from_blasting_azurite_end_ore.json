@@ -1,0 +1,11 @@
+{
+  "type": "minecraft:blasting",
+  "category": "misc",
+  "cookingtime": 100,
+  "experience": 0.25,
+  "group": "azurite",
+  "ingredient": "tutorialmod:azurite_end_ore",
+  "result": {
+    "id": "tutorialmod:azurite"
+  }
+}
