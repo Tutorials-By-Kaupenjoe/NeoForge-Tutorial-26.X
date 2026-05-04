@@ -1,0 +1,10 @@
+{
+  "values": [
+    "tutorialmod:azurite_block",
+    "tutorialmod:raw_azurite_block",
+    "tutorialmod:azurite_ore",
+    "tutorialmod:azurite_deepslate_ore",
+    "tutorialmod:azurite_nether_ore",
+    "tutorialmod:azurite_end_ore"
+  ]
+}
