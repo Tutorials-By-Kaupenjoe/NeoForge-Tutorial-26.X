@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
@@ -40,6 +41,9 @@ public class ModBlocks {
                     properties.strength(7f).requiresCorrectToolForDrops()));
 
 
+    public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
+            properties -> new MagicBlock(properties.strength(2f)
+                    .requiresCorrectToolForDrops().sound(SoundType.DECORATED_POT)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function) {
