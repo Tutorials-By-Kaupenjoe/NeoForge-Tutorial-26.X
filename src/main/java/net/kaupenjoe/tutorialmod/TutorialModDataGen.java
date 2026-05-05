@@ -1,9 +1,6 @@
 package net.kaupenjoe.tutorialmod;
 
-import net.kaupenjoe.tutorialmod.datagen.ModBlockLootTableProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModBlockTagsProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModModelProvider;
-import net.kaupenjoe.tutorialmod.datagen.ModRecipeProvider;
+import net.kaupenjoe.tutorialmod.datagen.*;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.loot.LootTableProvider;
@@ -29,5 +26,6 @@ public class TutorialModDataGen {
                 List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
 
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
+        generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
     }
 }

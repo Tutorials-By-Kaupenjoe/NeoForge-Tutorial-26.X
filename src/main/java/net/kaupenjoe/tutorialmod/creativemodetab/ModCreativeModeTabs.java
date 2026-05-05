@@ -29,6 +29,7 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModItems.METAL_DETECTOR);
                         output.accept(ModItems.ONION);
+                        output.accept(ModItems.END_FIRE_STARTER);
 
 
                     }).build());

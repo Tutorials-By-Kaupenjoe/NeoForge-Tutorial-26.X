@@ -20,6 +20,11 @@ public class ModItems {
     public static final DeferredItem<Item> ONION = ITEMS.registerItem("onion",
             properties -> new Item(properties.food(ModFoods.ONION, ModFoods.ONION_CONSUMABLE)));
 
+    public static final DeferredItem<Item> END_FIRE_STARTER = ITEMS.registerItem("end_fire_starter",
+            properties -> new Item(properties.stacksTo(32)));
+
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }
