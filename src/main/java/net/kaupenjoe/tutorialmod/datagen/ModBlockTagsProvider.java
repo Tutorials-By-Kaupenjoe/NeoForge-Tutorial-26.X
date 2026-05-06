@@ -27,7 +27,8 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.AZURITE_END_ORE.get())
                 .add(ModBlocks.MAGIC_BLOCK.get())
                 .add(ModBlocks.AZURITE_STAIRS.get())
-                .add(ModBlocks.AZURITE_SLAB.get());
+                .add(ModBlocks.AZURITE_SLAB.get())
+                .add(ModBlocks.AZURITE_PRESSURE_PLATE.get());
 
         tag(BlockTags.NEEDS_IRON_TOOL)
                 .add(ModBlocks.AZURITE_DEEPSLATE_ORE.get());
@@ -38,5 +39,17 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
 
         tag(ModTags.Blocks.METAL_DETECTABLES)
                 .addTag(Tags.Blocks.ORES);
+
+        tag(BlockTags.STAIRS)
+                .add(ModBlocks.AZURITE_STAIRS.get());
+        tag(BlockTags.SLABS)
+                .add(ModBlocks.AZURITE_SLAB.get());
+        tag(BlockTags.PRESSURE_PLATES)
+                .add(ModBlocks.AZURITE_PRESSURE_PLATE.get());
+        tag(BlockTags.BUTTONS)
+                .add(ModBlocks.AZURITE_BUTTON.get());
+
+
+
     }
 }

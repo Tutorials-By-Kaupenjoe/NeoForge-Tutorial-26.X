@@ -1,0 +1,32 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_azurite": {
+      "conditions": {
+        "items": [
+          {
+            "items": "tutorialmod:azurite"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "tutorialmod:azurite_pressure_plate"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_azurite"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "tutorialmod:azurite_pressure_plate"
+    ]
+  }
+}
