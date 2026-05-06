@@ -53,6 +53,9 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.FENCE_GATES).add(ModBlocks.AZURITE_FENCE_GATE.get());
         tag(BlockTags.WALLS).add(ModBlocks.AZURITE_WALL.get());
 
+        tag(BlockTags.DOORS).add(ModBlocks.AZURITE_DOOR.get());
+        tag(BlockTags.TRAPDOORS).add(ModBlocks.AZURITE_TRAPDOOR.get());
+
 
     }
 }

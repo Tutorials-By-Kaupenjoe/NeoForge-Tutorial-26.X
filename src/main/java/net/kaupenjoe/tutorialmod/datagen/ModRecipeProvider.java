@@ -87,6 +87,13 @@ public class ModRecipeProvider extends RecipeProvider {
                 .group("azurite").save(output);
         wall(RecipeCategory.BUILDING_BLOCKS, ModBlocks.AZURITE_WALL.get(), ModBlocks.AZURITE_BLOCK.get());
 
+        doorBuilder(ModBlocks.AZURITE_DOOR.get(), Ingredient.of(ModItems.AZURITE.get()))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .group("azurite").save(output);
+        trapdoorBuilder(ModBlocks.AZURITE_TRAPDOOR.get(), Ingredient.of(ModItems.AZURITE.get()))
+                .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
+                .group("azurite").save(output);
+
     }
 
     @Override
