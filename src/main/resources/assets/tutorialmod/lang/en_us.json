@@ -21,6 +21,9 @@
   "block.tutorialmod.azurite_slab": "Azurite Slab",
   "block.tutorialmod.azurite_button": "Azurite Button",
   "block.tutorialmod.azurite_pressure_plate": "Azurite Pressure Plate",
+  "block.tutorialmod.azurite_fence": "Azurite Fence",
+  "block.tutorialmod.azurite_fence_gate": "Azurite Fence Gate",
+  "block.tutorialmod.azurite_wall": "Azurite Wall",
 
 
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",
