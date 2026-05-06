@@ -6,6 +6,8 @@
     "tutorialmod:azurite_deepslate_ore",
     "tutorialmod:azurite_nether_ore",
     "tutorialmod:azurite_end_ore",
-    "tutorialmod:magic_block"
+    "tutorialmod:magic_block",
+    "tutorialmod:azurite_stairs",
+    "tutorialmod:azurite_slab"
   ]
 }

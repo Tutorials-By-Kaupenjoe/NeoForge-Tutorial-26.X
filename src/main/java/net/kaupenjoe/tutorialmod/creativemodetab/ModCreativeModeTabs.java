@@ -49,6 +49,9 @@ public class ModCreativeModeTabs {
 
                         output.accept(ModBlocks.MAGIC_BLOCK);
 
+                        output.accept(ModBlocks.AZURITE_STAIRS);
+                        output.accept(ModBlocks.AZURITE_SLAB);
+
 
                     }).build());
 

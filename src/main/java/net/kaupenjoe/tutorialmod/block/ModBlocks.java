@@ -9,9 +9,7 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
-import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.DropExperienceBlock;
-import net.minecraft.world.level.block.SoundType;
+import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -49,6 +47,15 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MAGIC_BLOCK = registerBlock("magic_block",
             properties -> new MagicBlock(properties.strength(2f)
                     .requiresCorrectToolForDrops().sound(SoundType.DECORATED_POT)), Component.translatable("tooltip.tutorialmod.magic_block.tooltip"));
+
+    public static final DeferredBlock<Block> AZURITE_STAIRS = registerBlock("azurite_stairs",
+            properties -> new StairBlock(ModBlocks.AZURITE_BLOCK.get().defaultBlockState(),
+                    properties.strength(3f).requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+    public static final DeferredBlock<Block> AZURITE_SLAB = registerBlock("azurite_slab",
+            properties -> new SlabBlock(properties.strength(3f)
+                    .requiresCorrectToolForDrops().sound(SoundType.AMETHYST)));
+
+
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
