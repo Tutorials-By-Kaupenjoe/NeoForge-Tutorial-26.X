@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod.item.custom;
 
+import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.particles.BlockParticleOption;
@@ -86,8 +87,7 @@ public class MetalDetectorItem extends Item {
     }
 
     private boolean isValuableBlock(BlockState blockState) {
-        return blockState.is(Blocks.IRON_ORE) || blockState.is(Blocks.DEEPSLATE_IRON_ORE)
-                || blockState.is(Blocks.DIAMOND_ORE) || blockState.is(Blocks.DEEPSLATE_DIAMOND_ORE);
+        return blockState.is(ModTags.Blocks.METAL_DETECTABLES);
     }
 
     @Override
