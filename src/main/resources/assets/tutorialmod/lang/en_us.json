@@ -19,6 +19,11 @@
 
 
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",
-  "creativetab.tutorialmod.azurite_blocks": "Azurite Tutorial Blocks"
+  "creativetab.tutorialmod.azurite_blocks": "Azurite Tutorial Blocks",
+
+  "tooltip.tutorialmod.onion.tooltip": "Tastes like an Onion...",
+  "tooltip.tutorialmod.magic_block.tooltip": "It's quite §9MAGICAL§r",
+  "tooltip.tutorialmod.metal_detector.shift_down": "Discover valuables by clicking on Blocks",
+  "tooltip.tutorialmod.metal_detector": "Press §eShift§r for more Information"
 
 }
