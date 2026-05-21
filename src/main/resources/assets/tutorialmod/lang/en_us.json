@@ -8,6 +8,13 @@
   "item.tutorialmod.onion": "Onion",
   "item.tutorialmod.end_fire_starter": "End Fire Starter",
 
+  "item.tutorialmod.azurite_sword": "Azurite Sword",
+  "item.tutorialmod.azurite_pickaxe": "Azurite Pickaxe",
+  "item.tutorialmod.azurite_shovel": "Azurite Shovel",
+  "item.tutorialmod.azurite_axe": "Azurite Axe",
+  "item.tutorialmod.azurite_hoe": "Azurite Hoe",
+  "item.tutorialmod.azurite_spear": "Azurite Spear",
+
 
   "block.tutorialmod.azurite_block": "Block of Azurite",
   "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",

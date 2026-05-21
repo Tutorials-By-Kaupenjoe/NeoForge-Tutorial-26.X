@@ -56,6 +56,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.DOORS).add(ModBlocks.AZURITE_DOOR.get());
         tag(BlockTags.TRAPDOORS).add(ModBlocks.AZURITE_TRAPDOOR.get());
 
+        tag(ModTags.Blocks.NEEDS_AZURITE_TOOL)
+                .add(ModBlocks.MAGIC_BLOCK.get())
+                .addTag(BlockTags.NEEDS_IRON_TOOL);
+
+        tag(ModTags.Blocks.INCORRECT_FOR_AZURITE_TOOL)
+                .addTag(BlockTags.INCORRECT_FOR_IRON_TOOL)
+                .remove(ModTags.Blocks.NEEDS_AZURITE_TOOL);
+
 
     }
 }
