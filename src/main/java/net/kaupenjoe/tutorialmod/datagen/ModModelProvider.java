@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.client.data.models.BlockModelGenerators;
 import net.minecraft.client.data.models.ItemModelGenerators;
@@ -28,6 +29,11 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.AZURITE_AXE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateFlatItem(ModItems.AZURITE_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.AZURITE_SPEAR.get());
+
+        itemModels.generateTrimmableItem(ModItems.AZURITE_HELMET.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_CHESTPLATE.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_LEGGINGS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
+        itemModels.generateTrimmableItem(ModItems.AZURITE_BOOTS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
 
         /* BLOCKS */

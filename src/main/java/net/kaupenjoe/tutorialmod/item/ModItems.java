@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.item.equipment.ArmorType;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -47,6 +48,14 @@ public class ModItems {
             properties -> new Item(properties.spear(ModToolTiers.AZURITE, 0.95f, 0.7f, 0.7f,
                     3.5f, 13f, 8.5f, 5.1f, 13.37f, 4.67f)));
 
+    public static final DeferredItem<Item> AZURITE_HELMET = ITEMS.registerItem("azurite_helmet",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.HELMET)));
+    public static final DeferredItem<Item> AZURITE_CHESTPLATE = ITEMS.registerItem("azurite_chestplate",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.CHESTPLATE)));
+    public static final DeferredItem<Item> AZURITE_LEGGINGS = ITEMS.registerItem("azurite_leggings",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.LEGGINGS)));
+    public static final DeferredItem<Item> AZURITE_BOOTS = ITEMS.registerItem("azurite_boots",
+            properties -> new Item(properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
 
     public static void register(IEventBus eventBus) {

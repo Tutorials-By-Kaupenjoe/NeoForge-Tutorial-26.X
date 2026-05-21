@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "equipment",
+  "group": "azurite",
+  "key": {
+    "A": "tutorialmod:azurite"
+  },
+  "pattern": [
+    "A A",
+    "AAA",
+    "AAA"
+  ],
+  "result": {
+    "id": "tutorialmod:azurite_chestplate"
+  }
+}

@@ -34,5 +34,10 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.HOES).add(ModItems.AZURITE_HOE.get());
         tag(ItemTags.SPEARS).add(ModItems.AZURITE_SPEAR.get());
 
+        tag(ItemTags.HEAD_ARMOR).add(ModItems.AZURITE_HELMET.get());
+        tag(ItemTags.CHEST_ARMOR).add(ModItems.AZURITE_CHESTPLATE.get());
+        tag(ItemTags.LEG_ARMOR).add(ModItems.AZURITE_LEGGINGS.get());
+        tag(ItemTags.FOOT_ARMOR).add(ModItems.AZURITE_BOOTS.get());
+
     }
 }

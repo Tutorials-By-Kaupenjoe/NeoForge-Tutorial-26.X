@@ -38,6 +38,11 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.AZURITE_HOE);
                         output.accept(ModItems.AZURITE_SPEAR);
 
+                        output.accept(ModItems.AZURITE_HELMET);
+                        output.accept(ModItems.AZURITE_CHESTPLATE);
+                        output.accept(ModItems.AZURITE_LEGGINGS);
+                        output.accept(ModItems.AZURITE_BOOTS);
+
 
                     }).build());
 
