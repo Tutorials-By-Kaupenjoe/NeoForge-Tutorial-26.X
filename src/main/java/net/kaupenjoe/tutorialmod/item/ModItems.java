@@ -67,6 +67,9 @@ public class ModItems {
     public static final DeferredItem<Item> KAUPEN_BOW = ITEMS.registerItem("kaupen_bow",
             properties -> new BowItem(properties.durability(500)));
 
+    public static final DeferredItem<Item> BLIZZARD_STAFF = ITEMS.registerItem("blizzard_staff",
+            properties -> new Item(properties.stacksTo(1)));
+
 
 
 

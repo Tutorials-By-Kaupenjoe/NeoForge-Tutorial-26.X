@@ -1,0 +1,247 @@
+{
+	"format_version": "1.21.11",
+	"credit": "Made with Blockbench",
+	"texture_size": [32, 32],
+	"textures": {
+		"0": "tutorialmod:item/blizzard_staff_3d",
+		"particle": "tutorialmod:item/blizzard_staff_3d"
+	},
+	"elements": [
+		{
+			"name": "staff_grip",
+			"from": [7.25, 0, 7.25],
+			"to": [8.75, 9, 8.75],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 6.5, 8]},
+			"faces": {
+				"north": {"uv": [0, 0, 1, 5.5], "texture": "#0"},
+				"east": {"uv": [1.5, 0, 2.5, 5.5], "texture": "#0"},
+				"south": {"uv": [3, 0, 4, 5.5], "texture": "#0"},
+				"west": {"uv": [4.5, 0, 5.5, 5.5], "texture": "#0"},
+				"up": {"uv": [7, 8, 6, 7], "texture": "#0"},
+				"down": {"uv": [8.5, 0, 7.5, 1], "texture": "#0"}
+			}
+		},
+		{
+			"name": "staff_pommel_ring_bottom",
+			"from": [7, 0.6, 7],
+			"to": [9, 1.6, 9],
+			"faces": {
+				"north": {"uv": [9, 4, 10, 4.5], "texture": "#0"},
+				"east": {"uv": [4.5, 9, 5.5, 9.5], "texture": "#0"},
+				"south": {"uv": [9, 5, 10, 5.5], "texture": "#0"},
+				"west": {"uv": [9, 6, 10, 6.5], "texture": "#0"},
+				"up": {"uv": [5.5, 7, 4.5, 6], "texture": "#0"},
+				"down": {"uv": [7, 5.5, 6, 6.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "staff_pommel_ring_top",
+			"from": [7, 4.1, 7],
+			"to": [9, 5.1, 9],
+			"faces": {
+				"north": {"uv": [10.5, 1, 11.5, 1.5], "texture": "#0"},
+				"east": {"uv": [10.5, 2, 11.5, 2.5], "texture": "#0"},
+				"south": {"uv": [10.5, 3, 11.5, 3.5], "texture": "#0"},
+				"west": {"uv": [10.5, 4, 11.5, 4.5], "texture": "#0"},
+				"up": {"uv": [8.5, 5.5, 7.5, 4.5], "texture": "#0"},
+				"down": {"uv": [8.5, 6, 7.5, 7], "texture": "#0"}
+			}
+		},
+		{
+			"name": "chappe_base",
+			"from": [7, 9, 7],
+			"to": [9, 10, 9],
+			"faces": {
+				"north": {"uv": [7.5, 7.5, 8.5, 8], "texture": "#0"},
+				"east": {"uv": [0, 8, 1, 8.5], "texture": "#0"},
+				"south": {"uv": [1.5, 8, 2.5, 8.5], "texture": "#0"},
+				"west": {"uv": [6, 8.5, 7, 9], "texture": "#0"},
+				"up": {"uv": [4, 7, 3, 6], "texture": "#0"},
+				"down": {"uv": [7, 4, 6, 5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "crystal_base",
+			"from": [7.75, 11.5, 6.5],
+			"to": [9.75, 13.5, 9.5],
+			"rotation": {"angle": 0, "axis": "y", "origin": [8, 13.5, 8]},
+			"faces": {
+				"north": {"uv": [8.5, 2.5, 7.5, 1.5], "rotation": 180, "texture": "#0"},
+				"east": {"uv": [6, 0, 7, 1.5], "rotation": 90, "texture": "#0"},
+				"south": {"uv": [4, 7.5, 3, 8.5], "texture": "#0"},
+				"west": {"uv": [6, 2, 7, 3.5], "rotation": 270, "texture": "#0"},
+				"up": {"uv": [1.5, 6, 2.5, 7.5], "texture": "#0"},
+				"down": {"uv": [0, 6, 1, 7.5], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "crystal_base",
+			"from": [6.25, 11, 7],
+			"to": [8.25, 13, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7, 13.5, 8]},
+			"faces": {
+				"north": {"uv": [6, 2, 7, 3], "rotation": 270, "texture": "#0"},
+				"east": {"uv": [8.5, 2.5, 7.5, 1.5], "rotation": 180, "texture": "#0"},
+				"south": {"uv": [6, 0, 7, 1], "rotation": 90, "texture": "#0"},
+				"west": {"uv": [4, 7.5, 3, 8.5], "texture": "#0"},
+				"up": {"uv": [1.5, 6, 2.5, 7], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [0, 6.5, 1, 7.5], "rotation": 90, "texture": "#0"}
+			}
+		},
+		{
+			"name": "crystal_base",
+			"from": [7, 13, 7],
+			"to": [9, 15, 9],
+			"rotation": {"angle": 0, "axis": "y", "origin": [7.75, 16, 8]},
+			"faces": {
+				"north": {"uv": [4, 7.5, 3, 8.5], "texture": "#0"},
+				"east": {"uv": [6, 2, 7, 3], "rotation": 270, "texture": "#0"},
+				"south": {"uv": [8.5, 2.5, 7.5, 1.5], "rotation": 180, "texture": "#0"},
+				"west": {"uv": [6, 0, 7, 1], "rotation": 90, "texture": "#0"},
+				"up": {"uv": [1.5, 6, 2.5, 7], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 6.5, 1, 7.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [4.75, 11, 8],
+			"to": [5.75, 12, 8],
+			"faces": {
+				"north": {"uv": [12, 2, 12.5, 2.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 2, 12.5, 2.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [9.75, 15, 8],
+			"to": [10.75, 16, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5.25, 15.5, 8]},
+			"faces": {
+				"north": {"uv": [12, 1, 12.5, 1.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 1, 12.5, 1.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [10.75, 13, 8],
+			"to": [11.75, 14, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5.25, 15.5, 8]},
+			"faces": {
+				"north": {"uv": [12, 1.5, 12.5, 2], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 1.5, 12.5, 2], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [10.25, 11, 8],
+			"to": [11.25, 12, 8],
+			"rotation": {"angle": 0, "axis": "y", "origin": [5.25, 15.5, 8]},
+			"faces": {
+				"north": {"uv": [12, 2, 12.5, 2.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 2, 12.5, 2.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [4.25, 13, 8],
+			"to": [5.25, 14, 8],
+			"faces": {
+				"north": {"uv": [12, 1.5, 12.5, 2], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 1.5, 12.5, 2], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [5.25, 15, 8],
+			"to": [6.25, 16, 8],
+			"faces": {
+				"north": {"uv": [12, 1, 12.5, 1.5], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [12, 1, 12.5, 1.5], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "texture": "#0"}
+			}
+		},
+		{
+			"name": "snow_particle",
+			"from": [7, 16, 8],
+			"to": [9, 17, 8],
+			"faces": {
+				"north": {"uv": [6, 2.5, 7, 3], "texture": "#0"},
+				"east": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"south": {"uv": [6, 0.5, 7, 1], "texture": "#0"},
+				"west": {"uv": [0, 0, 0, 0.5], "texture": "#0"},
+				"up": {"uv": [0, 0, 0.5, 0], "texture": "#0"},
+				"down": {"uv": [0, 0, 0.5, 0], "texture": "#0"}
+			}
+		}
+	],
+	"display": {
+		"thirdperson_righthand": {
+			"translation": [0, 3.25, 0]
+		},
+		"ground": {
+			"rotation": [67.28, -28.64, -41.92],
+			"translation": [0, -1.25, 0]
+		},
+		"gui": {
+			"rotation": [0, 0, -46.5],
+			"translation": [-0.75, -0.5, 0]
+		},
+		"head": {
+			"rotation": [-90, 0, 0],
+			"translation": [0, -2, -3.5]
+		},
+		"fixed": {
+			"translation": [0, -1.25, 0]
+		}
+	},
+	"groups": [
+		{
+			"name": "hilt",
+			"origin": [0, 0, 0],
+			"scope": 0,
+			"color": 0,
+			"children": [
+				0,
+				1,
+				2,
+				{
+					"name": "chappe",
+					"origin": [0, 0, 0],
+					"scope": 0,
+					"color": 0,
+					"children": [3]
+				}
+			]
+		},
+		{
+			"name": "crystal",
+			"origin": [8, 8, 8],
+			"scope": 0,
+			"color": 0,
+			"children": [4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+		}
+	]
+}
