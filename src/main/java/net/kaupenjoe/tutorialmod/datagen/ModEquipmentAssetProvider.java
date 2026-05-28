@@ -25,6 +25,8 @@ public class ModEquipmentAssetProvider implements DataProvider {
     private static void bootstrap(BiConsumer<ResourceKey<EquipmentAsset>, EquipmentClientInfo> output) {
         output.accept(ModArmorMaterials.AZURITE_KEY, EquipmentClientInfo.builder()
                         .addHumanoidLayers(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "azurite"), false)
+                        .addLayers(EquipmentClientInfo.LayerType.HORSE_BODY,
+                                new EquipmentClientInfo.Layer(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "azurite")))
                 .build());
     }
 

@@ -57,6 +57,10 @@ public class ModItems {
     public static final DeferredItem<Item> AZURITE_BOOTS = ITEMS.registerItem("azurite_boots",
             properties -> new Item(properties.humanoidArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL, ArmorType.BOOTS)));
 
+    public static final DeferredItem<Item> AZURITE_HORSE_ARMOR = ITEMS.registerItem("azurite_horse_armor",
+            properties -> new Item(properties.horseArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL)));
+
+
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

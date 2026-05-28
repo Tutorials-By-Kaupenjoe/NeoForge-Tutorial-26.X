@@ -35,6 +35,8 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateTrimmableItem(ModItems.AZURITE_LEGGINGS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
         itemModels.generateTrimmableItem(ModItems.AZURITE_BOOTS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
 
+        itemModels.generateFlatItem(ModItems.AZURITE_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
+
 
         /* BLOCKS */
         // blockModels.createTrivialCube(ModBlocks.AZURITE_BLOCK.get());
