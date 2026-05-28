@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
+import net.kaupenjoe.tutorialmod.item.custom.DataTabletItem;
 import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.*;
@@ -59,6 +60,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> AZURITE_HORSE_ARMOR = ITEMS.registerItem("azurite_horse_armor",
             properties -> new Item(properties.horseArmor(ModArmorMaterials.AZURITE_ARMOR_MATERIAL)));
+
+    public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
+            properties -> new DataTabletItem(properties.stacksTo(1)));
 
 
 

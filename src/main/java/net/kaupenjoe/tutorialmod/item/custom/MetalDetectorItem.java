@@ -1,5 +1,7 @@
 package net.kaupenjoe.tutorialmod.item.custom;
 
+import net.kaupenjoe.tutorialmod.data.ModDataComponents;
+import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -53,6 +55,7 @@ public class MetalDetectorItem extends Item {
                     // spawn particles
                     spawnFoundParticles(level, positionClicked, blockState);
 
+                    addDataToDataTablet(player, positionClicked.below(i));
 
                     break;
                 }
@@ -64,6 +67,15 @@ public class MetalDetectorItem extends Item {
         }
 
         return InteractionResult.SUCCESS;
+    }
+
+    private void addDataToDataTablet(Player player, BlockPos position) {
+        int slotIndex = player.getInventory().findSlotMatchingItem(new ItemStack(ModItems.DATA_TABLET.get()));
+        if(slotIndex == -1) {
+            return;
+        }
+        ItemStack dataTablet = player.getInventory().getItem(slotIndex);
+        dataTablet.set(ModDataComponents.COORDINATES, position);
     }
 
     private void spawnFoundParticles(Level level, BlockPos positionClicked, BlockState blockState) {
