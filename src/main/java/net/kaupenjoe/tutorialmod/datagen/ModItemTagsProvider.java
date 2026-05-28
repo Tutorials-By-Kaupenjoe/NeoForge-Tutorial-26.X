@@ -39,5 +39,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.LEG_ARMOR).add(ModItems.AZURITE_LEGGINGS.get());
         tag(ItemTags.FOOT_ARMOR).add(ModItems.AZURITE_BOOTS.get());
 
+        tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.KAUPEN_BOW.get());
+
     }
 }

@@ -64,6 +64,11 @@ public class ModItems {
     public static final DeferredItem<Item> DATA_TABLET = ITEMS.registerItem("data_tablet",
             properties -> new DataTabletItem(properties.stacksTo(1)));
 
+    public static final DeferredItem<Item> KAUPEN_BOW = ITEMS.registerItem("kaupen_bow",
+            properties -> new BowItem(properties.durability(500)));
+
+
+
 
 
     public static void register(IEventBus eventBus) {

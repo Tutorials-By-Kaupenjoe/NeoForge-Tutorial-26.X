@@ -55,6 +55,10 @@ public class ModModelProvider extends ModelProvider {
                 new ClientItem(new ConditionalItemModel.Unbaked(Optional.empty(), new HasComponent(ModDataComponents.COORDINATES.get(), false),
                         unbakedDataTabletOn, unbakedDataTablet), new ClientItem.Properties(false, false, 1f)));
 
+        itemModels.createFlatItemModel(ModItems.KAUPEN_BOW.get(), ModelTemplates.BOW);
+        itemModels.generateBow(ModItems.KAUPEN_BOW.get());
+
+
         /* BLOCKS */
         // blockModels.createTrivialCube(ModBlocks.AZURITE_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RAW_AZURITE_BLOCK.get());
