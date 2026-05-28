@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.network.chat.Component;
@@ -84,6 +85,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_TRAPDOOR = registerBlock("azurite_trapdoor",
             properties -> new TrapDoorBlock(BlockSetType.IRON, properties.strength(2F)
                     .requiresCorrectToolForDrops().sound(SoundType.AMETHYST).noOcclusion()));
+
+    public static final DeferredBlock<Block> AZURITE_LAMP = registerBlock("azurite_lamp",
+            properties -> new AzuriteLampBlock(properties.strength(2F)
+                    .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(AzuriteLampBlock.CLICKED) ? 15 : 0)));
 
 
 
