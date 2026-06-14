@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
+import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.network.chat.Component;
 import net.minecraft.util.valueproviders.UniformInt;
@@ -89,6 +90,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_LAMP = registerBlock("azurite_lamp",
             properties -> new AzuriteLampBlock(properties.strength(2F)
                     .requiresCorrectToolForDrops().lightLevel(state -> state.getValue(AzuriteLampBlock.CLICKED) ? 15 : 0)));
+
+    public static final DeferredBlock<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
+            properties -> new PedestalBlock(properties.strength(2F).requiresCorrectToolForDrops()));
 
 
 

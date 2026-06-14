@@ -10,6 +10,7 @@
     "tutorialmod:azurite_stairs",
     "tutorialmod:azurite_slab",
     "tutorialmod:azurite_pressure_plate",
-    "tutorialmod:azurite_lamp"
+    "tutorialmod:azurite_lamp",
+    "tutorialmod:pedestal"
   ]
 }
