@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
 import net.minecraft.core.BlockPos;
@@ -56,6 +57,7 @@ public class MetalDetectorItem extends Item {
                     spawnFoundParticles(level, positionClicked, blockState);
 
                     addDataToDataTablet(player, positionClicked.below(i));
+                    player.awardStat(ModStats.VALUABLES_FOUND.get(), 1);
 
                     break;
                 }
