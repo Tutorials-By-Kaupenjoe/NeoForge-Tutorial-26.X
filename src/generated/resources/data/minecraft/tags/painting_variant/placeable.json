@@ -1,0 +1,16 @@
+{
+  "values": [
+    {
+      "id": "tutorialmod:saw_them",
+      "required": false
+    },
+    {
+      "id": "tutorialmod:shrimp",
+      "required": false
+    },
+    {
+      "id": "tutorialmod:world",
+      "required": false
+    }
+  ]
+}
