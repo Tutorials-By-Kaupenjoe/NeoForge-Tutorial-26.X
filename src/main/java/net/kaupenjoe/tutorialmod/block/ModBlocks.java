@@ -5,7 +5,9 @@ import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
 import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
@@ -96,6 +98,9 @@ public class ModBlocks {
 
 
 
+    public static ResourceKey<Block> getRK(Block block) {
+        return BuiltInRegistries.BLOCK.getResourceKey(block).get();
+    }
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Function<BlockBehaviour.Properties, T> function, Component... components) {
         DeferredBlock<T> toReturn = BLOCKS.registerBlock(name, function);

@@ -4,7 +4,9 @@ import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.DataTabletItem;
 import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
+import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
+import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
@@ -72,7 +74,9 @@ public class ModItems {
 
 
 
-
+    public static ResourceKey<Item> getRK(Item item) {
+        return BuiltInRegistries.ITEM.getResourceKey(item).get();
+    }
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
