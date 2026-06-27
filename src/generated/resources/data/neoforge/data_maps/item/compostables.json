@@ -1,0 +1,10 @@
+{
+  "values": {
+    "tutorialmod:onion": {
+      "chance": 0.5
+    },
+    "tutorialmod:onion_seeds": {
+      "chance": 0.3
+    }
+  }
+}
