@@ -1,7 +1,9 @@
 package net.kaupenjoe.tutorialmod.datagen;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.registries.Registries;
@@ -15,6 +17,7 @@ import net.minecraft.world.level.storage.loot.LootTable;
 import net.minecraft.world.level.storage.loot.entries.LootItem;
 import net.minecraft.world.level.storage.loot.functions.ApplyBonusCount;
 import net.minecraft.world.level.storage.loot.functions.SetItemCountFunction;
+import net.minecraft.world.level.storage.loot.predicates.LootItemBlockStatePropertyCondition;
 import net.minecraft.world.level.storage.loot.providers.number.UniformGenerator;
 
 import java.util.Set;
@@ -54,6 +57,10 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         
         dropSelf(ModBlocks.AZURITE_LAMP.get());
         dropSelf(ModBlocks.PEDESTAL_BLOCK.get());
+
+        add(ModBlocks.ONION_CROP.get(), createCropDrops(ModBlocks.ONION_CROP.get(),
+                ModItems.ONION.get(), ModItems.ONION_SEEDS.get(), LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.ONION_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(OnionCropBlock.AGE, 3))));
 
     }
 

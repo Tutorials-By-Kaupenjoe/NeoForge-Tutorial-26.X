@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.item;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.DataTabletItem;
 import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
@@ -71,6 +72,9 @@ public class ModItems {
 
     public static final DeferredItem<Item> BLIZZARD_STAFF = ITEMS.registerItem("blizzard_staff",
             properties -> new Item(properties.stacksTo(1)));
+
+    public static final DeferredItem<Item> ONION_SEEDS = ITEMS.registerItem("onion_seeds",
+            properties -> new BlockItem(ModBlocks.ONION_CROP.get(), properties));
 
 
 

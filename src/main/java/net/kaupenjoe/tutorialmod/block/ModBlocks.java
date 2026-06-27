@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
+import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
 import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
@@ -96,6 +97,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> PEDESTAL_BLOCK = registerBlock("pedestal",
             properties -> new PedestalBlock(properties.strength(2F).requiresCorrectToolForDrops()));
 
+    public static final DeferredBlock<Block> ONION_CROP = BLOCKS.registerBlock("onion_crop",
+            properties -> new OnionCropBlock(properties.randomTicks().sound(SoundType.CROP)
+                    .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
 
 
     public static ResourceKey<Block> getRK(Block block) {
