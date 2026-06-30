@@ -9,6 +9,7 @@ import net.minecraft.world.item.consume_effects.ApplyStatusEffectsConsumeEffect;
 
 public class ModFoods {
     public static final FoodProperties ONION = new FoodProperties.Builder().nutrition(2).saturationModifier(0.3f).build();
+    public static final FoodProperties GOJI_BERRIES = new FoodProperties.Builder().nutrition(1).saturationModifier(0.2f).build();
 
     public static final Consumable ONION_CONSUMABLE = Consumables.defaultFood()
             .consumeSeconds(2.1f).onConsume(new ApplyStatusEffectsConsumeEffect(new MobEffectInstance(MobEffects.NAUSEA, 400), 0.10f)).build();

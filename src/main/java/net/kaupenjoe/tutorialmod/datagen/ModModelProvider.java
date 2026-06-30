@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
+import net.kaupenjoe.tutorialmod.block.custom.GojiBerryBushBlock;
 import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
@@ -89,5 +90,6 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createNonTemplateModelBlock(ModBlocks.PEDESTAL_BLOCK.get());
 
         blockModels.createCropBlock(ModBlocks.ONION_CROP.get(), OnionCropBlock.AGE, 0, 1, 2, 3);
+        blockModels.createCropBlock(ModBlocks.GOJI_BERRY_BUSH.get(), GojiBerryBushBlock.AGE, 0, 1, 2, 3);
     }
 }

@@ -1,10 +1,7 @@
 package net.kaupenjoe.tutorialmod.block;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
-import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
-import net.kaupenjoe.tutorialmod.block.custom.MagicBlock;
-import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
-import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
+import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -100,6 +97,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> ONION_CROP = BLOCKS.registerBlock("onion_crop",
             properties -> new OnionCropBlock(properties.randomTicks().sound(SoundType.CROP)
                     .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
+
+    public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.registerBlock("goji_berry_bush",
+            properties -> new GojiBerryBushBlock(properties.randomTicks().sound(SoundType.SWEET_BERRY_BUSH)
+                    .noCollision().pushReaction(PushReaction.DESTROY)));
 
 
     public static ResourceKey<Block> getRK(Block block) {
