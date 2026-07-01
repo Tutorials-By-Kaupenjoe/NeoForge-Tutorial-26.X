@@ -11,6 +11,10 @@
     {
       "id": "tutorialmod:world",
       "required": false
+    },
+    {
+      "id": "tutorialmod:wanderer",
+      "required": false
     }
   ]
 }

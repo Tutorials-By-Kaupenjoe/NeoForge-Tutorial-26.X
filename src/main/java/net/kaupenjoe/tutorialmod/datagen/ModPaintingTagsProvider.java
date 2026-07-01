@@ -19,6 +19,7 @@ public class ModPaintingTagsProvider extends PaintingVariantTagsProvider {
         getOrCreateRawBuilder(PaintingVariantTags.PLACEABLE)
                 .add(TagEntry.optionalElement(ModPaintings.SAW_THEM_KEY.identifier()))
                 .add(TagEntry.optionalElement(ModPaintings.SHRIMP_KEY.identifier()))
-                .add(TagEntry.optionalElement(ModPaintings.WORLD_KEY.identifier()));
+                .add(TagEntry.optionalElement(ModPaintings.WORLD_KEY.identifier()))
+                .add(TagEntry.optionalElement(ModPaintings.WANDERER_KEY.identifier()));
     }
 }

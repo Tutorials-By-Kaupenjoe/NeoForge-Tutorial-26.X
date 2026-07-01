@@ -64,6 +64,7 @@ public class ModModelProvider extends ModelProvider {
         itemModels.declareCustomModelItem(ModItems.BLIZZARD_STAFF.get());
 
         itemModels.generateFlatItem(ModItems.BAR_BRAWL_MUSIC_DISC.get(), ModelTemplates.FLAT_ITEM);
+        itemModels.generateFlatItem(ModItems.RADIATION_STAFF.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
 
 
 

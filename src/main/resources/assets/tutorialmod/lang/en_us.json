@@ -36,6 +36,8 @@
   "item.minecraft.splash_potion.effect.stinky_potion": "Stinky Splash Potion",
   "item.minecraft.lingering_potion.effect.stinky_potion": "Stinky Lingering Potion",
 
+  "item.tutorialmod.radiation_staff": "Radiation Staff",
+
 
   "block.tutorialmod.azurite_block": "Block of Azurite",
   "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",
@@ -69,6 +71,8 @@
   "painting.tutorialmod.saw_them.author": "NanoAttack",
   "painting.tutorialmod.world.title": "World",
   "painting.tutorialmod.world.author": "NanoAttack",
+  "painting.tutorialmod.wanderer.title": "Wanderer",
+  "painting.tutorialmod.wanderer.author": "PlatinumG17",
 
 
   "jukebox_song.tutorialmod.bar_brawl": "Bryan Tech - Bar Brawl (CC0)",
