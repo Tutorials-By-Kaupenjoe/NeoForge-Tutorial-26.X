@@ -65,6 +65,9 @@
 
   "stat.tutorialmod.valuables_found": "Valuables Found",
 
+  "sounds.tutorialmod.valuables_found": "Found Valuables",
+  "sounds.tutorialmod.valuables_not_found": "Did not find Valuables",
+
   "creativetab.tutorialmod.azurite_items": "Azurite Tutorial Items",
   "creativetab.tutorialmod.azurite_blocks": "Azurite Tutorial Blocks",
 

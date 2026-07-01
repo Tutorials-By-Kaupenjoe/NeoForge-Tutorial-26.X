@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item.custom;
 
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.client.Minecraft;
@@ -10,7 +11,6 @@ import net.minecraft.core.particles.BlockParticleOption;
 import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.network.chat.Component;
 import net.minecraft.server.level.ServerLevel;
-import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
@@ -21,7 +21,6 @@ import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.context.UseOnContext;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockState;
 
 import java.util.function.Consumer;
@@ -51,8 +50,8 @@ public class MetalDetectorItem extends Item {
                     // damage the item
                     context.getItemInHand().hurtAndBreak(1, player, context.getHand());
                     // play sound
-                    level.playSound(null, positionClicked, SoundEvents.AMETHYST_BLOCK_CHIME,
-                            SoundSource.BLOCKS, 1.5f, 1f);
+                    level.playSound(null, positionClicked, ModSounds.VALUABLES_FOUND.get(),
+                            SoundSource.BLOCKS, 1.5f, 0.8F + level.getRandom().nextFloat() * 0.4F);
                     // spawn particles
                     spawnFoundParticles(level, positionClicked, blockState);
 
@@ -65,6 +64,8 @@ public class MetalDetectorItem extends Item {
 
             if(!foundBlock) {
                 outputNoValuablesFound(player);
+                level.playSound(null, positionClicked, ModSounds.VALUABLES_NOT_FOUND.get(),
+                        SoundSource.BLOCKS, 1.5f, 0.8F + level.getRandom().nextFloat() * 0.4F);
             }
         }
 
