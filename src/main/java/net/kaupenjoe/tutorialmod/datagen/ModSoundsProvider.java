@@ -18,5 +18,7 @@ public class ModSoundsProvider extends SoundDefinitionsProvider {
         add(ModSounds.VALUABLES_NOT_FOUND.get(), definition().subtitle("sounds.tutorialmod.valuables_not_found")
                 .with(sound(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "valuables_not_found"))));
 
+        add(ModSounds.BAR_BRAWL.get(), definition().subtitle("sounds.tutorialmod.bar_brawl")
+                .with(sound(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "bar_brawl")).stream()));
     }
 }

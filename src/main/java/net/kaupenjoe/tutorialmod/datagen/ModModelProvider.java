@@ -63,6 +63,10 @@ public class ModModelProvider extends ModelProvider {
 
         itemModels.declareCustomModelItem(ModItems.BLIZZARD_STAFF.get());
 
+        itemModels.generateFlatItem(ModItems.BAR_BRAWL_MUSIC_DISC.get(), ModelTemplates.FLAT_ITEM);
+
+
+
         /* BLOCKS */
         // blockModels.createTrivialCube(ModBlocks.AZURITE_BLOCK.get());
         blockModels.createTrivialCube(ModBlocks.RAW_AZURITE_BLOCK.get());

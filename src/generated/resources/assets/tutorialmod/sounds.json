@@ -1,4 +1,13 @@
 {
+  "bar_brawl": {
+    "sounds": [
+      {
+        "name": "tutorialmod:bar_brawl",
+        "stream": true
+      }
+    ],
+    "subtitle": "sounds.tutorialmod.bar_brawl"
+  },
   "valuables_found": {
     "sounds": [
       "tutorialmod:valuables_found"

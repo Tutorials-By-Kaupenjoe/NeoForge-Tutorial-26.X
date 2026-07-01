@@ -44,5 +44,7 @@ public class ModItemTagsProvider extends ItemTagsProvider {
 
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.getRK(ModItems.KAUPEN_BOW.get()));
 
+        tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.getRK(ModItems.BAR_BRAWL_MUSIC_DISC.get()));
+
     }
 }
