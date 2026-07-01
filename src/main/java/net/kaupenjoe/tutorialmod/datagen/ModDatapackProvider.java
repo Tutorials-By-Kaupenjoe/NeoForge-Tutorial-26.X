@@ -13,7 +13,8 @@ import java.util.concurrent.CompletableFuture;
 public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
     public static final RegistrySetBuilder BUILDER = new RegistrySetBuilder()
             .add(Registries.PAINTING_VARIANT, ModPaintings::bootstrap)
-            .add(Registries.JUKEBOX_SONG, ModJukeboxSongs::bootstrap);
+            .add(Registries.JUKEBOX_SONG, ModJukeboxSongs::bootstrap)
+            .add(Registries.DAMAGE_TYPE, ModDamageTypes::bootstrap);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(TutorialMod.MOD_ID));

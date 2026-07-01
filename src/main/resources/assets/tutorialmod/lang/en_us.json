@@ -78,6 +78,9 @@
   "effect.tutorialmod.stinky": "Stinky",
   "effect.tutorialmod.stinky.description": "Causes entities around you to take damage",
 
+  "death.attack.stinky": "%s was stinkied to death!",
+  "death.attack.stinky.player": "%s was stinkied to death trying to outrun %s",
+
 
   "sounds.tutorialmod.valuables_found": "Found Valuables",
   "sounds.tutorialmod.valuables_not_found": "Did not find Valuables",
