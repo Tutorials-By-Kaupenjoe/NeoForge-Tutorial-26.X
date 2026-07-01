@@ -70,6 +70,10 @@
 
   "stat.tutorialmod.valuables_found": "Valuables Found",
 
+  "effect.tutorialmod.stinky": "Stinky",
+  "effect.tutorialmod.stinky.description": "Causes entities around you to take damage",
+
+
   "sounds.tutorialmod.valuables_found": "Found Valuables",
   "sounds.tutorialmod.valuables_not_found": "Did not find Valuables",
   "sounds.tutorialmod.bar_brawl": "Playing Bar Brawl Music Disc",
