@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
+import net.kaupenjoe.tutorialmod.block.custom.RiceCropBlock;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.advancements.predicates.StatePropertiesPredicate;
 import net.minecraft.core.Holder;
@@ -80,6 +81,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
                         .apply(SetItemCountFunction.setCount(UniformGenerator.between(1.0F, 2.0F)))
                         .apply(ApplyBonusCount.addUniformBonusCount(enchantments.getOrThrow(Enchantments.FORTUNE)))
         )));
+
+
+        add(ModBlocks.RICE_CROP.get(), createCropDrops(ModBlocks.RICE_CROP.get(),
+                ModItems.RICE_SHOOT.get(), ModItems.RICE_SHOOT.get(), LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP.get())
+                        .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, 7))));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {

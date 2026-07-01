@@ -102,6 +102,10 @@ public class ModBlocks {
             properties -> new GojiBerryBushBlock(properties.randomTicks().sound(SoundType.SWEET_BERRY_BUSH)
                     .noCollision().pushReaction(PushReaction.DESTROY)));
 
+    public static final DeferredBlock<Block> RICE_CROP = BLOCKS.registerBlock("rice_crop",
+            properties -> new RiceCropBlock(properties.randomTicks().sound(SoundType.CROP)
+                    .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
+
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

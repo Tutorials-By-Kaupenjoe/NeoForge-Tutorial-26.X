@@ -5,6 +5,7 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.block.custom.AzuriteLampBlock;
 import net.kaupenjoe.tutorialmod.block.custom.GojiBerryBushBlock;
 import net.kaupenjoe.tutorialmod.block.custom.OnionCropBlock;
+import net.kaupenjoe.tutorialmod.block.custom.RiceCropBlock;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.item.ModArmorMaterials;
 import net.kaupenjoe.tutorialmod.item.ModItems;
@@ -91,5 +92,6 @@ public class ModModelProvider extends ModelProvider {
 
         blockModels.createCropBlock(ModBlocks.ONION_CROP.get(), OnionCropBlock.AGE, 0, 1, 2, 3);
         blockModels.createCropBlock(ModBlocks.GOJI_BERRY_BUSH.get(), GojiBerryBushBlock.AGE, 0, 1, 2, 3);
+        blockModels.createCropBlock(ModBlocks.RICE_CROP.get(), RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
     }
 }
