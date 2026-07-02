@@ -1,0 +1,41 @@
+{
+  "parent": "minecraft:tutorialmod/plant_custom",
+  "criteria": {
+    "metal_detector": {
+      "conditions": {
+        "location": [
+          {
+            "condition": "minecraft:location_check",
+            "predicate": {
+              "can_see_sky": true
+            }
+          },
+          {
+            "condition": "minecraft:match_tool",
+            "predicate": {
+              "items": "tutorialmod:metal_detector"
+            }
+          }
+        ]
+      },
+      "trigger": "minecraft:item_used_on_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tutorialmod.metal_detector.description"
+    },
+    "icon": {
+      "id": "tutorialmod:metal_detector"
+    },
+    "title": {
+      "translate": "advancements.tutorialmod.metal_detector.title"
+    }
+  },
+  "requirements": [
+    [
+      "metal_detector"
+    ]
+  ],
+  "sends_telemetry_event": true
+}

@@ -96,6 +96,16 @@
   "tooltip.tutorialmod.onion.tooltip": "Tastes like an Onion...",
   "tooltip.tutorialmod.magic_block.tooltip": "It's quite §9MAGICAL§r",
   "tooltip.tutorialmod.metal_detector.shift_down": "Discover valuables by clicking on Blocks",
-  "tooltip.tutorialmod.metal_detector": "Press §eShift§r for more Information"
+  "tooltip.tutorialmod.metal_detector": "Press §eShift§r for more Information",
+
+
+  "advancements.tutorialmod.root.title": "TutorialMod Advancements",
+  "advancements.tutorialmod.root.description": "TutorialMod Advancements Pretty Cool!",
+
+  "advancements.tutorialmod.plant_custom.title": "Plant a Custom Plant",
+  "advancements.tutorialmod.plant_custom.description": "Planting these custom plants is pretty neat!",
+
+  "advancements.tutorialmod.metal_detector.title": "Detected Valuables",
+  "advancements.tutorialmod.metal_detector.description": "Try finding valuables with the Metal Detector"
 
 }

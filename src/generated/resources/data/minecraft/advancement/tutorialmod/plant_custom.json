@@ -1,0 +1,57 @@
+{
+  "parent": "tutorialmod:tutorialmod/root",
+  "criteria": {
+    "berries": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:goji_berry_bush",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "onion": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:onion_crop",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    },
+    "rice": {
+      "conditions": {
+        "location": [
+          {
+            "block": "tutorialmod:rice_crop",
+            "condition": "minecraft:block_state_property"
+          }
+        ]
+      },
+      "trigger": "minecraft:placed_block"
+    }
+  },
+  "display": {
+    "description": {
+      "translate": "advancements.tutorialmod.plant_custom.description"
+    },
+    "icon": {
+      "id": "tutorialmod:rice_shoot"
+    },
+    "title": {
+      "translate": "advancements.tutorialmod.plant_custom.title"
+    }
+  },
+  "requirements": [
+    [
+      "berries",
+      "rice",
+      "onion"
+    ]
+  ],
+  "sends_telemetry_event": true
+}
