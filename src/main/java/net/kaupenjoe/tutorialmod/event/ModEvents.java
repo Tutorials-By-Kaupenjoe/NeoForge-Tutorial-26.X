@@ -1,6 +1,8 @@
 package net.kaupenjoe.tutorialmod.event;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.networking.ClientPayloadHandler;
+import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
@@ -15,6 +17,9 @@ import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
+import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
+import net.neoforged.neoforge.network.registration.HandlerThread;
+import net.neoforged.neoforge.network.registration.PayloadRegistrar;
 
 @EventBusSubscriber(modid = TutorialMod.MOD_ID)
 public class ModEvents {
@@ -34,5 +39,13 @@ public class ModEvents {
         PotionBrewing.Builder builder = event.getBuilder();
 
         builder.addMix(Potions.AWKWARD, Blocks.DIRT.asItem(), ModPotions.STINKY_POTION);
+    }
+
+    @SubscribeEvent
+    public static void registerPayloads(RegisterPayloadHandlersEvent event) {
+        final PayloadRegistrar registrar = event.registrar("1")
+                .executesOn(HandlerThread.MAIN);
+
+        registrar.playToServer(TestPacketC2S.TYPE, TestPacketC2S.STREAM_CODEC, ClientPayloadHandler::handleTestPacket);
     }
 }

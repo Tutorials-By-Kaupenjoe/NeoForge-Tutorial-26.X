@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
+import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityTypes;
@@ -16,6 +17,7 @@ import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
+import net.neoforged.neoforge.client.network.ClientPacketDistributor;
 
 // This class will not load on dedicated servers. Accessing client side code from here is safe.
 @Mod(value = TutorialMod.MOD_ID, dist = Dist.CLIENT)
@@ -64,6 +66,7 @@ public class TutorialModClient {
         while(ModKeyMappings.PRESS_KAUPEN.get().consumeClick()) {
             // HERE: WE ARE ON THE CLIENT!
             Minecraft.getInstance().player.sendSystemMessage(Component.literal("I just pressed the Kaupen Key!"));
+            ClientPacketDistributor.sendToServer(new TestPacketC2S("Kaupenjoe", 67));
         }
     }
 }
