@@ -1,0 +1,13 @@
+{
+  "gives": {
+    "count": 10,
+    "id": "tutorialmod:onion"
+  },
+  "max_uses": 9.0,
+  "reputation_discount": 0.05,
+  "wants": {
+    "count": 2.0,
+    "id": "minecraft:diamond"
+  },
+  "xp": 6.0
+}
