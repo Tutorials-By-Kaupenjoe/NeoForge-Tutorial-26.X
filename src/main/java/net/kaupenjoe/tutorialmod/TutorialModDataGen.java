@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.datagen.*;
+import net.kaupenjoe.tutorialmod.datagen.villager.ModPOITags;
 import net.kaupenjoe.tutorialmod.datagen.villager.ModVillagerTradeTags;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.PackOutput;
@@ -38,5 +39,6 @@ public class TutorialModDataGen {
         generator.addProvider(true, new ModAdvancements(packOutput, lookupProvider));
 
         generator.addProvider(true, new ModVillagerTradeTags(packOutput, lookupProvider));
+        generator.addProvider(true, new ModPOITags(packOutput, lookupProvider));
     }
 }

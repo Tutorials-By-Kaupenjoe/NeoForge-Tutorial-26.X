@@ -9,6 +9,7 @@ import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
+import net.kaupenjoe.tutorialmod.villager.ModVillagers;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.bus.api.SubscribeEvent;
@@ -47,6 +48,8 @@ public class TutorialMod {
         ModEffects.register(modEventBus);
 
         ModPotions.register(modEventBus);
+        ModVillagers.register(modEventBus);
+
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab

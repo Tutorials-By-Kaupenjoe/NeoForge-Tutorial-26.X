@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.datagen.villager;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -24,6 +25,14 @@ public class ModVillagerTrades {
     public static final ResourceKey<VillagerTrade> FARMER_2_GOJI_BERRIES_EMERALD = createKey("farmer/2/goji_berries_emerald");
 
     public static final ResourceKey<VillagerTrade> LIBRARIAN_1_AZURITE_ENCHANTED = createKey("librarian/1/azurite_enchanted");
+
+
+    public static final ResourceKey<VillagerTrade> KAUPENGER_1_EMERALD_METAL_DETECTOR = createKey("kaupenger/1/emerald_chisel");
+    public static final ResourceKey<VillagerTrade> KAUPENGER_1_EMERALD_RAW_AZURITE = createKey("kaupenger/1/emerald_raw_azurite");
+
+    public static final ResourceKey<VillagerTrade> KAUPENGER_2_EMERALD_METAL_DETECTOR = createKey("kaupenger/2/emerald_chisel");
+    public static final ResourceKey<VillagerTrade> KAUPENGER_2_AZURITE_MAGIC_BLOCK = createKey("kaupenger/2/azurite_magic_block");
+
 
     public static void bootstrap(BootstrapContext<VillagerTrade> context) {
         var items = context.lookup(Registries.ITEM);
@@ -52,6 +61,24 @@ public class ModVillagerTrades {
                         HolderSet.direct(enchantments.getOrThrow(Enchantments.INFINITY),
                                 enchantments.getOrThrow(Enchantments.MULTISHOT)))));
 
+
+        context.register(KAUPENGER_1_EMERALD_METAL_DETECTOR, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 12),
+                new ItemStackTemplate(ModItems.METAL_DETECTOR, 1),
+                8, 12, 0.05F, Optional.empty(), List.of()));
+        context.register(KAUPENGER_1_EMERALD_RAW_AZURITE, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 12),
+                new ItemStackTemplate(ModItems.RAW_AZURITE, 1),
+                8, 12, 0.05F, Optional.empty(), List.of()));
+
+        context.register(KAUPENGER_2_EMERALD_METAL_DETECTOR, new VillagerTrade(
+                new TradeCost(Items.EMERALD, 10),
+                new ItemStackTemplate(ModItems.METAL_DETECTOR, 1),
+                8, 12, 0.05F, Optional.empty(), List.of()));
+        context.register(KAUPENGER_2_AZURITE_MAGIC_BLOCK, new VillagerTrade(
+                new TradeCost(ModItems.AZURITE, 10),
+                new ItemStackTemplate(ModBlocks.MAGIC_BLOCK.asItem(), 1),
+                8, 12, 0.05F, Optional.empty(), List.of()));
     }
 
 
