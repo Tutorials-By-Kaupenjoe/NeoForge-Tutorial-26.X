@@ -1,5 +1,7 @@
 package net.kaupenjoe.tutorialmod;
 
+import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
+import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
@@ -14,6 +16,7 @@ import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 import net.neoforged.neoforge.client.event.ClientTickEvent;
 import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
+import net.neoforged.neoforge.client.event.EntityRenderersEvent;
 import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
@@ -68,5 +71,10 @@ public class TutorialModClient {
             Minecraft.getInstance().player.sendSystemMessage(Component.literal("I just pressed the Kaupen Key!"));
             ClientPacketDistributor.sendToServer(new TestPacketC2S("Kaupenjoe", 67));
         }
+    }
+
+    @SubscribeEvent
+    public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
+        event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
     }
 }

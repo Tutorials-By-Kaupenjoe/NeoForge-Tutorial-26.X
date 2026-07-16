@@ -1,6 +1,5 @@
 package net.kaupenjoe.tutorialmod.block.entity.custom;
 
-import net.kaupenjoe.tutorialmod.block.custom.PedestalBlock;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.HolderLookup;
