@@ -25,7 +25,10 @@ public class TutorialModDataGen {
         generator.addProvider(true, new ModModelProvider(packOutput));
         generator.addProvider(true, new ModBlockTagsProvider(packOutput, lookupProvider));
         generator.addProvider(true, new LootTableProvider(packOutput, Collections.emptySet(),
-                List.of(new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK)), lookupProvider));
+                List.of(
+                        new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK),
+                        new LootTableProvider.SubProviderEntry(ModExtraLootProvider::new, LootContextParamSets.ALL_PARAMS)
+                ), lookupProvider));
 
         generator.addProvider(true, new ModRecipeProvider.Runner(packOutput, lookupProvider));
         generator.addProvider(true, new ModDataMapProvider(packOutput, lookupProvider));
@@ -40,5 +43,7 @@ public class TutorialModDataGen {
 
         generator.addProvider(true, new ModVillagerTradeTags(packOutput, lookupProvider));
         generator.addProvider(true, new ModPOITags(packOutput, lookupProvider));
+
+        generator.addProvider(true, new ModGlobalLootModifierProvider(packOutput, lookupProvider));
     }
 }
