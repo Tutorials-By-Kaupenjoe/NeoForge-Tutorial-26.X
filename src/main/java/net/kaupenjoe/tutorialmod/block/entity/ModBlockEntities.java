@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.block.entity;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.block.entity.custom.CrystallizerBlockEntity;
 import net.kaupenjoe.tutorialmod.block.entity.custom.PedestalBlockEntity;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
@@ -17,6 +18,10 @@ public class ModBlockEntities {
     public static final Supplier<BlockEntityType<PedestalBlockEntity>> PEDESTAL_BE =
             BLOCK_ENTITIES.register("pedestal_be", () -> new BlockEntityType<>(
                     PedestalBlockEntity::new, ModBlocks.PEDESTAL_BLOCK.get()));
+
+    public static final Supplier<BlockEntityType<CrystallizerBlockEntity>> CRYSTALLIZER_BE =
+            BLOCK_ENTITIES.register("crystallizer_be", () -> new BlockEntityType<>(
+                    CrystallizerBlockEntity::new, ModBlocks.CRYSTALLIZER.get()));
 
 
     public static void register(IEventBus eventBus) {

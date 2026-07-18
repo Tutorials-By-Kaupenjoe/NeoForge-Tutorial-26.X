@@ -1,6 +1,8 @@
 package net.kaupenjoe.tutorialmod.menu;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerMenu;
+import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalMenu;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.inventory.AbstractContainerMenu;
@@ -17,6 +19,9 @@ public class ModMenuTypes {
 
     public static final DeferredHolder<MenuType<?>, MenuType<PedestalMenu>> PEDESTAL_MENU =
             registerMenuType("pedestal_menu", PedestalMenu::new);
+
+    public static final DeferredHolder<MenuType<?>, MenuType<CrystallizerMenu>> CRYSTALLIZER_MENU =
+            registerMenuType("crystallizer_menu", CrystallizerMenu::new);
 
 
     private static <T extends AbstractContainerMenu>DeferredHolder<MenuType<?>, MenuType<T>> registerMenuType(String name,

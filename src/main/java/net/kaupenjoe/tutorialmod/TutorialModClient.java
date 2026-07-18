@@ -5,6 +5,7 @@ import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRender
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
+import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.client.Minecraft;
@@ -80,5 +81,6 @@ public class TutorialModClient {
     @SubscribeEvent
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
+        event.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
     }
 }

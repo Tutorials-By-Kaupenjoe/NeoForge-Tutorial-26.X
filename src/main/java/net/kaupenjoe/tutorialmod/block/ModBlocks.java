@@ -106,6 +106,9 @@ public class ModBlocks {
             properties -> new RiceCropBlock(properties.randomTicks().sound(SoundType.CROP)
                     .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
 
+    public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
+            properties -> new CrystallizerBlock(properties.strength(2F).requiresCorrectToolForDrops()));
+
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

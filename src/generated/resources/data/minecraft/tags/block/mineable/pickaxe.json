@@ -11,6 +11,7 @@
     "tutorialmod:azurite_slab",
     "tutorialmod:azurite_pressure_plate",
     "tutorialmod:azurite_lamp",
-    "tutorialmod:pedestal"
+    "tutorialmod:pedestal",
+    "tutorialmod:crystallizer"
   ]
 }
