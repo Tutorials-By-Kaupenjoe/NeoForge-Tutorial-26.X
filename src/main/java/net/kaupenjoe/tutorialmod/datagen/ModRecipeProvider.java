@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.datagen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.datagen.recipe.CrystallizerRecipeBuilder;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
@@ -14,6 +15,7 @@ import net.minecraft.world.item.crafting.AbstractCookingRecipe;
 import net.minecraft.world.item.crafting.CookingBookCategory;
 import net.minecraft.world.item.crafting.Ingredient;
 import net.minecraft.world.level.ItemLike;
+import net.minecraft.world.level.block.Blocks;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -194,6 +196,26 @@ public class ModRecipeProvider extends RecipeProvider {
                 .unlockedBy(getHasName(ModItems.AZURITE.get()), has(ModItems.AZURITE))
                 .group("azurite")
                 .save(output);
+
+
+        CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Items.STICK), Items.END_ROD, 2)
+                .unlockedBy(getHasName(Items.STICK), has(Items.STICK))
+                .save(output, "tutorialmod:end_rod_from_crystallizing");
+
+        CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Blocks.DIRT), Items.NETHER_STAR)
+                .unlockedBy(getHasName(Blocks.DIRT), has(Blocks.DIRT))
+                .save(output, "tutorialmod:nether_star_from_crystallizing");
+        CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.RAW_AZURITE), ModItems.AZURITE, 3)
+                .unlockedBy(getHasName(ModItems.RAW_AZURITE), has(ModItems.RAW_AZURITE))
+                .save(output, "tutorialmod:azurite_from_crystallizing");
+
+        CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(ModItems.GOJI_BERRIES), ModItems.END_FIRE_STARTER, 4)
+                .unlockedBy(getHasName(ModItems.GOJI_BERRIES), has(ModItems.GOJI_BERRIES))
+                .save(output, "tutorialmod:end_fire_starter_from_crystallizing");
+
+        CrystallizerRecipeBuilder.crystallizerRecipe(RecipeCategory.MISC, Ingredient.of(Items.REDSTONE), ModItems.DATA_TABLET)
+                .unlockedBy(getHasName(Items.REDSTONE), has(Items.REDSTONE))
+                .save(output, "tutorialmod:datatablet_from_crystallizing");
     }
 
     @Override

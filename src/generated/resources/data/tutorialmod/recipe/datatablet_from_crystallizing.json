@@ -1,0 +1,7 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "minecraft:redstone",
+  "result": {
+    "id": "tutorialmod:data_tablet"
+  }
+}
