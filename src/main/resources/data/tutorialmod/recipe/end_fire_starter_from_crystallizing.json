@@ -1,0 +1,8 @@
+{
+  "type": "tutorialmod:crystallizing",
+  "ingredient": "tutorialmod:goji_berries",
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:end_fire_starter"
+  }
+}

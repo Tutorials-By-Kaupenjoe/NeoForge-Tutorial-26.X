@@ -9,6 +9,7 @@ import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
+import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
@@ -55,6 +56,7 @@ public class TutorialMod {
         ModBlockEntities.register(modEventBus);
         ModMenuTypes.register(modEventBus);
 
+        ModRecipes.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab
