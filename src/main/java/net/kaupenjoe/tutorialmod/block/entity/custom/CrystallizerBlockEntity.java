@@ -1,5 +1,6 @@
 package net.kaupenjoe.tutorialmod.block.entity.custom;
 
+import net.kaupenjoe.tutorialmod.block.custom.CrystallizerBlock;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerMenu;
@@ -114,6 +115,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
         if(hasRecipe() && isOutputSlotEmptyOrReceivable()) {
             increaseCraftingProgress();
             setChanged(level, pos, state);
+            level.setBlockAndUpdate(pos, state.setValue(CrystallizerBlock.LIT, true));
 
             if(hasCraftingFinished()) {
                 craftItem();
@@ -121,6 +123,7 @@ public class CrystallizerBlockEntity extends BlockEntity implements MenuProvider
             }
         } else {
             resetProgress();
+            level.setBlockAndUpdate(pos, state.setValue(CrystallizerBlock.LIT, false));
         }
     }
 
