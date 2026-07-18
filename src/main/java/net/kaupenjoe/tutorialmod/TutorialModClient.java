@@ -4,6 +4,8 @@ import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
+import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
+import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.client.Minecraft;
 import net.minecraft.network.chat.Component;
@@ -14,10 +16,7 @@ import net.neoforged.fml.ModContainer;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
-import net.neoforged.neoforge.client.event.ClientTickEvent;
-import net.neoforged.neoforge.client.event.ComputeFovModifierEvent;
-import net.neoforged.neoforge.client.event.EntityRenderersEvent;
-import net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent;
+import net.neoforged.neoforge.client.event.*;
 import net.neoforged.neoforge.client.gui.ConfigurationScreen;
 import net.neoforged.neoforge.client.gui.IConfigScreenFactory;
 import net.neoforged.neoforge.client.network.ClientPacketDistributor;
@@ -76,5 +75,10 @@ public class TutorialModClient {
     @SubscribeEvent
     public static void registerBER(EntityRenderersEvent.RegisterRenderers event) {
         event.registerBlockEntityRenderer(ModBlockEntities.PEDESTAL_BE.get(), PedestalBlockEntityRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerScreens(RegisterMenuScreensEvent event) {
+        event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
     }
 }

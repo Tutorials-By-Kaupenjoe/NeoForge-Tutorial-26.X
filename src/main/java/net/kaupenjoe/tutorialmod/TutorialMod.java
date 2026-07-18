@@ -7,6 +7,7 @@ import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
@@ -52,6 +53,7 @@ public class TutorialMod {
         ModVillagers.register(modEventBus);
 
         ModBlockEntities.register(modEventBus);
+        ModMenuTypes.register(modEventBus);
 
 
         NeoForge.EVENT_BUS.register(this);
