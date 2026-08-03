@@ -106,5 +106,7 @@ public class ModModelProvider extends ModelProvider {
 
         blockModels.createTrivialCube(ModBlocks.DRIFTWOOD_PLANKS.get());
         blockModels.createTintedLeaves(ModBlocks.DRIFTWOOD_LEAVES.get(), TexturedModel.LEAVES, -12012265);
+
+        blockModels.createPlantWithDefaultItem(ModBlocks.DRIFTWOOD_SAPLING.get(), ModBlocks.POTTED_DRIFTWOOD_SAPLING.get(), BlockModelGenerators.PlantType.NOT_TINTED);
     }
 }

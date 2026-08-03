@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.kaupenjoe.tutorialmod.worldgen.tree.ModTreeGrowers;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.core.particles.ParticleTypes;
@@ -165,6 +166,14 @@ public class ModBlocks {
                     return 30;
                 }
             });
+
+    public static final DeferredBlock<Block> DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
+            properties -> new SaplingBlock(ModTreeGrowers.DRIFTWOOD, properties.mapColor(MapColor.PLANT)
+                    .noCollision().randomTicks().instabreak().sound(SoundType.GRASS)
+                    .pushReaction(PushReaction.DESTROY)));
+    public static final DeferredBlock<Block> POTTED_DRIFTWOOD_SAPLING = BLOCKS.registerBlock("potted_driftwood_sapling",
+            properties -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRIFTWOOD_SAPLING, properties
+                    .instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
 
     public static ResourceKey<Block> getRK(Block block) {

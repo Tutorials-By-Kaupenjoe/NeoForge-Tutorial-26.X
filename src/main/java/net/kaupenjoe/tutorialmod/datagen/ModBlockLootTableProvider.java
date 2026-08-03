@@ -94,8 +94,11 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.STRIPPED_DRIFTWOOD_LOG.get());
         dropSelf(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.get());
         dropSelf(ModBlocks.DRIFTWOOD_PLANKS.get());
-        // NOTE: CHANGE LEAVES TO SAPLING ONCE SAPLING IS ADDED!
-        add(ModBlocks.DRIFTWOOD_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.DRIFTWOOD_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        dropSelf(ModBlocks.DRIFTWOOD_SAPLING.get());
+
+        add(ModBlocks.DRIFTWOOD_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.DRIFTWOOD_SAPLING.get(), NORMAL_LEAVES_SAPLING_CHANCES));
+        add(ModBlocks.POTTED_DRIFTWOOD_SAPLING.get(), createPotFlowerItemTable(ModBlocks.DRIFTWOOD_SAPLING));
+
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {
