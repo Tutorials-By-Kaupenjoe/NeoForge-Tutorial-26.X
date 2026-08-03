@@ -5,6 +5,7 @@ import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.data.PackOutput;
+import net.minecraft.tags.BlockItemTags;
 import net.minecraft.tags.BlockTags;
 import net.neoforged.neoforge.common.Tags;
 import net.neoforged.neoforge.common.data.BlockTagsProvider;
@@ -70,5 +71,14 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
         tag(BlockTags.CROPS)
                 .add(ModBlocks.getRK(ModBlocks.ONION_CROP.get()));
 
+        tag(BlockTags.LEAVES)
+                .add(ModBlocks.DRIFTWOOD_LEAVES.getKey());
+        tag(BlockTags.PLANKS)
+                .add(ModBlocks.DRIFTWOOD_PLANKS.getKey());
+        tag(BlockItemTags.LOGS_THAT_BURN.block())
+                .add(ModBlocks.DRIFTWOOD_LOG.getKey())
+                .add(ModBlocks.DRIFTWOOD_WOOD.getKey())
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG.getKey())
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.getKey());
     }
 }

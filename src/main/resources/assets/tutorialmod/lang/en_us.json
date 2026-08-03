@@ -65,6 +65,12 @@
   "block.tutorialmod.goji_berry_bush": "Goji Berry Bush",
   "block.tutorialmod.rice_crop": "Rice Crop",
 
+  "block.tutorialmod.driftwood_log": "Driftwood Log",
+  "block.tutorialmod.driftwood_planks": "Driftwood Planks",
+  "block.tutorialmod.driftwood_wood": "Driftwood Wood",
+  "block.tutorialmod.stripped_driftwood_log": "Stripped Driftwood Log",
+  "block.tutorialmod.stripped_driftwood_wood": "Stripped Driftwood Wood",
+  "block.tutorialmod.driftwood_leaves": "Driftwood Leaves",
 
   "painting.tutorialmod.shrimp.title": "Shrimp",
   "painting.tutorialmod.shrimp.author": "NanoAttack",

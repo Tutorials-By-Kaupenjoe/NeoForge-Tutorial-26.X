@@ -100,5 +100,11 @@ public class ModModelProvider extends ModelProvider {
         blockModels.createCropBlock(ModBlocks.RICE_CROP.get(), RiceCropBlock.AGE, 0, 1, 2, 3, 4, 5, 6, 7);
 
         blockModels.createFurnace(ModBlocks.CRYSTALLIZER.get(), TexturedModel.ORIENTABLE);
+
+        blockModels.woodProvider(ModBlocks.DRIFTWOOD_LOG.get()).logWithHorizontal(ModBlocks.DRIFTWOOD_LOG.get()).wood(ModBlocks.DRIFTWOOD_WOOD.get());
+        blockModels.woodProvider(ModBlocks.STRIPPED_DRIFTWOOD_LOG.get()).logWithHorizontal(ModBlocks.STRIPPED_DRIFTWOOD_LOG.get()).wood(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.get());
+
+        blockModels.createTrivialCube(ModBlocks.DRIFTWOOD_PLANKS.get());
+        blockModels.createTintedLeaves(ModBlocks.DRIFTWOOD_LEAVES.get(), TexturedModel.LEAVES, -12012265);
     }
 }

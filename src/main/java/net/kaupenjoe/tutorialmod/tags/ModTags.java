@@ -18,6 +18,7 @@ public class ModTags {
         public static final TagKey<Block> INCORRECT_FOR_AZURITE_TOOL = createTag("incorrect_for_azurite_tool");
 
 
+
         private static TagKey<Block> createTag(String name) {
             return BlockTags.create(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name));
         }
@@ -27,6 +28,7 @@ public class ModTags {
         public static final TagKey<Item> TRANSFORMABLE_ITEMS = createTag("transformable_items");
 
         public static final TagKey<Item> AZURITE_REPAIRABLE = createTag("azurite_repairable");
+        public static final TagKey<Item> DRIFTWOOD_LOGS = createTag("driftwood_logs");
 
         private static TagKey<Item> createTag(String name) {
             return ItemTags.create(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, name));

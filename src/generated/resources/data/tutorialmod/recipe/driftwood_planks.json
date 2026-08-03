@@ -1,0 +1,12 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "building",
+  "group": "planks",
+  "ingredients": [
+    "#tutorialmod:driftwood_logs"
+  ],
+  "result": {
+    "count": 4,
+    "id": "tutorialmod:driftwood_planks"
+  }
+}

@@ -1,6 +1,7 @@
 package net.kaupenjoe.tutorialmod.datagen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.block.ModBlocks;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.tags.ModTags;
 import net.minecraft.core.HolderLookup;
@@ -45,6 +46,21 @@ public class ModItemTagsProvider extends ItemTagsProvider {
         tag(ItemTags.BOW_ENCHANTABLE).add(ModItems.getRK(ModItems.KAUPEN_BOW.get()));
 
         tag(ItemTags.CREEPER_DROP_MUSIC_DISCS).add(ModItems.getRK(ModItems.BAR_BRAWL_MUSIC_DISC.get()));
+
+        tag(ItemTags.PLANKS)
+                .add(ModItems.getRK(ModBlocks.DRIFTWOOD_PLANKS.asItem()));
+
+        tag(ItemTags.LOGS_THAT_BURN)
+                .add(ModItems.getRK(ModBlocks.DRIFTWOOD_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.DRIFTWOOD_WOOD.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_DRIFTWOOD_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.asItem()));
+
+        tag(ModTags.Items.DRIFTWOOD_LOGS)
+                .add(ModItems.getRK(ModBlocks.DRIFTWOOD_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.DRIFTWOOD_WOOD.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_DRIFTWOOD_LOG.asItem()))
+                .add(ModItems.getRK(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.asItem()));
 
     }
 }

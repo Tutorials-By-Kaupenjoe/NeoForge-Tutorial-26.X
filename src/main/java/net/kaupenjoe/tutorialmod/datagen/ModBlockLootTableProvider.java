@@ -87,6 +87,15 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         add(ModBlocks.RICE_CROP.get(), createCropDrops(ModBlocks.RICE_CROP.get(),
                 ModItems.RICE_SHOOT.get(), ModItems.RICE_SHOOT.get(), LootItemBlockStatePropertyCondition.hasBlockStateProperties(ModBlocks.RICE_CROP.get())
                         .setProperties(StatePropertiesPredicate.Builder.properties().hasProperty(RiceCropBlock.AGE, 7))));
+
+
+        dropSelf(ModBlocks.DRIFTWOOD_LOG.get());
+        dropSelf(ModBlocks.DRIFTWOOD_WOOD.get());
+        dropSelf(ModBlocks.STRIPPED_DRIFTWOOD_LOG.get());
+        dropSelf(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.get());
+        dropSelf(ModBlocks.DRIFTWOOD_PLANKS.get());
+        // NOTE: CHANGE LEAVES TO SAPLING ONCE SAPLING IS ADDED!
+        add(ModBlocks.DRIFTWOOD_LEAVES.get(), block -> createLeavesDrops(block, ModBlocks.DRIFTWOOD_LEAVES.get(), NORMAL_LEAVES_SAPLING_CHANCES));
     }
 
     protected LootTable.Builder createMultipleOreDrops(Block block, Item item, float minDrops, float maxDrops) {

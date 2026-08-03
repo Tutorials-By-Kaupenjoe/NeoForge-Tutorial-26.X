@@ -3,6 +3,9 @@ package net.kaupenjoe.tutorialmod.block;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.custom.*;
 import net.kaupenjoe.tutorialmod.item.ModItems;
+import net.minecraft.core.BlockPos;
+import net.minecraft.core.Direction;
+import net.minecraft.core.particles.ParticleTypes;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.ResourceKey;
@@ -11,8 +14,10 @@ import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
+import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
+import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
 import net.minecraft.world.level.block.state.properties.NoteBlockInstrument;
 import net.minecraft.world.level.block.state.properties.WoodType;
@@ -108,6 +113,58 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
             properties -> new CrystallizerBlock(properties.strength(2F).requiresCorrectToolForDrops()));
+
+    public static final DeferredBlock<Block> DRIFTWOOD_LOG = registerBlock("driftwood_log",
+            properties -> new ModFlammableRotatedPillarBlock(properties.instrument(NoteBlockInstrument.BASS)
+                    .strength(2f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
+    public static final DeferredBlock<Block> DRIFTWOOD_WOOD = registerBlock("driftwood_wood",
+            properties -> new ModFlammableRotatedPillarBlock(properties.instrument(NoteBlockInstrument.BASS)
+                    .strength(2f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_DRIFTWOOD_LOG = registerBlock("stripped_driftwood_log",
+            properties -> new ModFlammableRotatedPillarBlock(properties.instrument(NoteBlockInstrument.BASS)
+                    .strength(2f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
+    public static final DeferredBlock<Block> STRIPPED_DRIFTWOOD_WOOD = registerBlock("stripped_driftwood_wood",
+            properties -> new ModFlammableRotatedPillarBlock(properties.instrument(NoteBlockInstrument.BASS)
+                    .strength(2f).sound(SoundType.CHERRY_WOOD).ignitedByLava()));
+
+
+    public static final DeferredBlock<Block> DRIFTWOOD_PLANKS = registerBlock("driftwood_planks",
+            properties -> new Block(properties.mapColor(MapColor.WOOD).instrument(NoteBlockInstrument.BASS)
+                    .strength(2.0F, 3.0F).sound(SoundType.WOOD).ignitedByLava()) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 20;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 5;
+                }
+            });
+    public static final DeferredBlock<Block> DRIFTWOOD_LEAVES = registerBlock("driftwood_leaves",
+            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES,
+                    properties.mapColor(MapColor.METAL).strength(0.2F).randomTicks().sound(SoundType.GRASS)
+                            .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).ignitedByLava().pushReaction(PushReaction.DESTROY)) {
+                @Override
+                public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return true;
+                }
+
+                @Override
+                public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 60;
+                }
+
+                @Override
+                public int getFireSpreadSpeed(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+                    return 30;
+                }
+            });
 
 
     public static ResourceKey<Block> getRK(Block block) {
