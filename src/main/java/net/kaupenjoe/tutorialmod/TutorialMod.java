@@ -13,6 +13,7 @@ import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
 import net.neoforged.bus.api.IEventBus;
@@ -59,6 +60,8 @@ public class TutorialMod {
 
         ModRecipes.register(modEventBus);
         ModTrunkPlacerTypes.register(modEventBus);
+
+        ModFoliagePlacerTypes.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab

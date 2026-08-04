@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.worldgen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.worldgen.tree.InvertedPyramidFoliagePlacer;
 import net.kaupenjoe.tutorialmod.worldgen.tree.SpiralTrunkPlacer;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
@@ -62,7 +63,8 @@ public class ModConfiguredFeatures {
                 //new ForkingTrunkPlacer(4, 3, 4),
 
                 BlockStateProvider.simple(ModBlocks.DRIFTWOOD_LEAVES.get()),
-                new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
+                new InvertedPyramidFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), 3),
+                // new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
 
                 new TwoLayersFeatureSize(1, 0, 2),
                 BlockStateProvider.simple(Blocks.DIRT)).build());
