@@ -31,7 +31,7 @@
       "upper_size": 2
     },
     "trunk_placer": {
-      "type": "minecraft:forking_trunk_placer",
+      "type": "tutorialmod:spiral_trunk_placer",
       "base_height": 4,
       "height_rand_a": 3,
       "height_rand_b": 4

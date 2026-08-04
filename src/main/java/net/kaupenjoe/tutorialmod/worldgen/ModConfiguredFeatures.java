@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.worldgen;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.worldgen.tree.SpiralTrunkPlacer;
 import net.minecraft.core.HolderSet;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstrapContext;
@@ -57,7 +58,8 @@ public class ModConfiguredFeatures {
 
         register(context, DRIFTWOOD_KEY, Feature.TREE, new TreeConfiguration.TreeConfigurationBuilder(
                 BlockStateProvider.simple(ModBlocks.DRIFTWOOD_LOG.get()),
-                new ForkingTrunkPlacer(4, 3, 4),
+                new SpiralTrunkPlacer(4, 3, 4),
+                //new ForkingTrunkPlacer(4, 3, 4),
 
                 BlockStateProvider.simple(ModBlocks.DRIFTWOOD_LEAVES.get()),
                 new BlobFoliagePlacer(ConstantInt.of(2), ConstantInt.of(3), 3),
