@@ -98,6 +98,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModBlocks.DRIFTWOOD_LEAVES);
 
                         output.accept(ModBlocks.DRIFTWOOD_SAPLING);
+                        output.accept(ModBlocks.KAUPEN_PORTAL);
 
 
                     }).build());

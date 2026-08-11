@@ -175,6 +175,9 @@ public class ModBlocks {
             properties -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRIFTWOOD_SAPLING, properties
                     .instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
 
+    public static final DeferredBlock<Block> KAUPEN_PORTAL = registerBlock("kaupen_portal",
+            properties -> new KaupenPortalBlock(properties.strength(3f)));
+
 
     public static ResourceKey<Block> getRK(Block block) {
         return BuiltInRegistries.BLOCK.getResourceKey(block).get();

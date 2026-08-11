@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.datagen.villager.ModVillagerTrades;
 import net.kaupenjoe.tutorialmod.worldgen.ModBiomeModifiers;
 import net.kaupenjoe.tutorialmod.worldgen.ModConfiguredFeatures;
 import net.kaupenjoe.tutorialmod.worldgen.ModPlacedFeatures;
+import net.kaupenjoe.tutorialmod.worldgen.dimension.ModDimensions;
 import net.minecraft.core.HolderLookup;
 import net.minecraft.core.RegistrySetBuilder;
 import net.minecraft.core.registries.Registries;
@@ -27,7 +28,10 @@ public class ModDatapackProvider extends DatapackBuiltinEntriesProvider {
 
             .add(Registries.CONFIGURED_FEATURE, ModConfiguredFeatures::bootstrap)
             .add(Registries.PLACED_FEATURE, ModPlacedFeatures::bootstrap)
-            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap);
+            .add(NeoForgeRegistries.Keys.BIOME_MODIFIERS, ModBiomeModifiers::bootstrap)
+
+            .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
+            .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem);
 
     public ModDatapackProvider(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
         super(output, registries, BUILDER, Set.of(TutorialMod.MOD_ID));
