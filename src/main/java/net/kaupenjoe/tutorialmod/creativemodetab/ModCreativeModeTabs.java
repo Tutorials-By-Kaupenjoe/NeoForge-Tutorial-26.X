@@ -56,6 +56,8 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.BAR_BRAWL_MUSIC_DISC);
                         output.accept(ModItems.RADIATION_STAFF);
 
+                        output.accept(ModItems.DODO_SPAWN_EGG);
+
 
                     }).build());
 

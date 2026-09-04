@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.creativemodetab.ModCreativeModeTabs;
 import net.kaupenjoe.tutorialmod.data.ModDataComponents;
 import net.kaupenjoe.tutorialmod.effect.ModEffects;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
@@ -62,6 +63,7 @@ public class TutorialMod {
         ModTrunkPlacerTypes.register(modEventBus);
 
         ModFoliagePlacerTypes.register(modEventBus);
+        ModEntities.register(modEventBus);
 
         NeoForge.EVENT_BUS.register(this);
         // Register the item to a creative tab

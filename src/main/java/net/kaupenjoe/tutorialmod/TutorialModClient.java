@@ -2,6 +2,10 @@ package net.kaupenjoe.tutorialmod;
 
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
+import net.kaupenjoe.tutorialmod.entity.client.DodoModel;
+import net.kaupenjoe.tutorialmod.entity.client.DodoRenderer;
+import net.kaupenjoe.tutorialmod.entity.client.ModModelLayerLocations;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
@@ -9,6 +13,7 @@ import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.client.Minecraft;
+import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.entity.EntityTypes;
 import net.neoforged.api.distmarker.Dist;
@@ -38,9 +43,12 @@ public class TutorialModClient {
 
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
-        // Some client setup code
-        TutorialMod.LOGGER.info("HELLO FROM CLIENT SETUP");
-        TutorialMod.LOGGER.info("MINECRAFT NAME >> {}", Minecraft.getInstance().getUser().getName());
+        EntityRenderers.register(ModEntities.DODO.get(), DodoRenderer::new);
+    }
+
+    @SubscribeEvent
+    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
+        event.registerLayerDefinition(ModModelLayerLocations.DODO, DodoModel::createBodyLayer);
     }
 
     @SubscribeEvent

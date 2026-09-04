@@ -1,6 +1,9 @@
 package net.kaupenjoe.tutorialmod.event;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
+import net.kaupenjoe.tutorialmod.entity.client.DodoModel;
+import net.kaupenjoe.tutorialmod.entity.custom.DodoEntity;
 import net.kaupenjoe.tutorialmod.networking.ClientPayloadHandler;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.kaupenjoe.tutorialmod.potion.ModPotions;
@@ -16,6 +19,7 @@ import net.minecraft.world.level.block.Blocks;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
+import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
 import net.neoforged.neoforge.network.event.RegisterPayloadHandlersEvent;
 import net.neoforged.neoforge.network.registration.HandlerThread;
@@ -47,5 +51,10 @@ public class ModEvents {
                 .executesOn(HandlerThread.MAIN);
 
         registrar.playToServer(TestPacketC2S.TYPE, TestPacketC2S.STREAM_CODEC, ClientPayloadHandler::handleTestPacket);
+    }
+
+    @SubscribeEvent
+    public static void registerAttributes(EntityAttributeCreationEvent event) {
+        event.put(ModEntities.DODO.get(), DodoEntity.createAttributes().build());
     }
 }

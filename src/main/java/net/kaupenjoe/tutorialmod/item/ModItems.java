@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.item;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.block.ModBlocks;
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.DataTabletItem;
 import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
@@ -88,6 +89,8 @@ public class ModItems {
     public static final DeferredItem<Item> RADIATION_STAFF = ITEMS.registerItem("radiation_staff",
             properties -> new Item(properties.rarity(Rarity.EPIC).stacksTo(1)));
 
+    public static final DeferredItem<Item> DODO_SPAWN_EGG = ITEMS.registerItem("dodo_spawn_egg",
+            properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.DODO.get())));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

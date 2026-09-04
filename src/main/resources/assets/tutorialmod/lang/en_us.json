@@ -38,6 +38,8 @@
 
   "item.tutorialmod.radiation_staff": "Radiation Staff",
 
+  "item.tutorialmod.dodo_spawn_egg": "Dodo Spawn Egg",
+
 
   "block.tutorialmod.azurite_block": "Block of Azurite",
   "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",
@@ -113,6 +115,8 @@
 
   "entity.minecraft.villager.tutorialmod.kaupenger": "Kaupenger",
   "key.tutorialmod.kaupen": "Kaupen Key",
+
+  "entity.tutorialmod.dodo": "Dodo",
 
   "advancements.tutorialmod.root.title": "TutorialMod Advancements",
   "advancements.tutorialmod.root.description": "TutorialMod Advancements Pretty Cool!",
