@@ -1,9 +1,12 @@
 package net.kaupenjoe.tutorialmod.entity.custom;
 
+import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.entity.variant.DodoVariant;
+import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.minecraft.network.syncher.EntityDataAccessor;
 import net.minecraft.network.syncher.EntityDataSerializers;
 import net.minecraft.network.syncher.SynchedEntityData;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.util.Util;
@@ -13,21 +16,23 @@ import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
+import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.ServerLevelAccessor;
 import net.minecraft.world.level.storage.ValueInput;
 import net.minecraft.world.level.storage.ValueOutput;
 import org.jspecify.annotations.Nullable;
 
-public class DodoEntity extends PathfinderMob {
+public class DodoEntity extends Animal {
     private static final EntityDataAccessor<Integer> VARIANT =
             SynchedEntityData.defineId(DodoEntity.class, EntityDataSerializers.INT);
 
     public final AnimationState idleAnimationState = new AnimationState();
     private int idleAnimationTimeout = 0;
 
-    public DodoEntity(EntityType<? extends PathfinderMob> type, Level level) {
+    public DodoEntity(EntityType<? extends Animal> type, Level level) {
         super(type, level);
     }
 
@@ -36,10 +41,14 @@ public class DodoEntity extends PathfinderMob {
         goalSelector.addGoal(0, new FloatGoal(this));
 
         goalSelector.addGoal(1, new PanicGoal(this, 2d));
+        goalSelector.addGoal(2, new BreedGoal(this, 1.25d));
+        goalSelector.addGoal(3, new TemptGoal(this, 1.25d, stack -> stack.is(ModItems.GOJI_BERRIES), false));
 
-        goalSelector.addGoal(2, new WaterAvoidingRandomStrollGoal(this, 1d));
-        goalSelector.addGoal(3, new LookAtPlayerGoal(this, Player.class, 7f));
-        goalSelector.addGoal(4, new RandomLookAroundGoal(this));
+        goalSelector.addGoal(4, new FollowParentGoal(this, 1.25d));
+
+        goalSelector.addGoal(5, new WaterAvoidingRandomStrollGoal(this, 1d));
+        goalSelector.addGoal(6, new LookAtPlayerGoal(this, Player.class, 7f));
+        goalSelector.addGoal(7, new RandomLookAroundGoal(this));
     }
 
     // ANIMATIONS
@@ -122,5 +131,18 @@ public class DodoEntity extends PathfinderMob {
     @Override
     protected @Nullable SoundEvent getHurtSound(DamageSource source) {
         return SoundEvents.PARROT_HURT;
+    }
+
+    /* BREEDABLE */
+    @Override
+    public boolean isFood(ItemStack itemStack) {
+        return itemStack.is(ModItems.GOJI_BERRIES);
+    }
+
+    @Override
+    public @Nullable AgeableMob getBreedOffspring(ServerLevel level, AgeableMob partner) {
+        DodoEntity baby = ModEntities.DODO.get().create(level, EntitySpawnReason.BREEDING);
+        baby.setVariant(Util.getRandom(DodoVariant.values(), this.random));
+        return baby;
     }
 }
