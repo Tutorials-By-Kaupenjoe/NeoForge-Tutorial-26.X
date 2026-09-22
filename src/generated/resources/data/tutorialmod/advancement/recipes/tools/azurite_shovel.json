@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_shovel"
+        "recipes": "tutorialmod:azurite_shovel"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

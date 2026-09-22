@@ -2,11 +2,9 @@ package net.kaupenjoe.tutorialmod.event;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
-import net.kaupenjoe.tutorialmod.entity.client.DodoModel;
 import net.kaupenjoe.tutorialmod.entity.custom.DodoEntity;
 import net.kaupenjoe.tutorialmod.networking.ClientPayloadHandler;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
-import net.kaupenjoe.tutorialmod.potion.ModPotions;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.effect.MobEffectInstance;
 import net.minecraft.world.effect.MobEffects;
@@ -15,13 +13,9 @@ import net.minecraft.world.entity.animal.Animal;
 import net.minecraft.world.entity.animal.sheep.Sheep;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.alchemy.PotionBrewing;
-import net.minecraft.world.item.alchemy.Potions;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.fml.common.EventBusSubscriber;
-import net.neoforged.neoforge.event.brewing.RegisterBrewingRecipesEvent;
 import net.neoforged.neoforge.event.entity.EntityAttributeCreationEvent;
 import net.neoforged.neoforge.event.entity.RegisterSpawnPlacementsEvent;
 import net.neoforged.neoforge.event.entity.living.LivingDamageEvent;
@@ -40,13 +34,6 @@ public class ModEvents {
                 sheep.addEffect(new MobEffectInstance(MobEffects.POISON, 600, 5));
             }
         }
-    }
-
-    @SubscribeEvent
-    public static void onBrewingRecipeRegister(RegisterBrewingRecipesEvent event) {
-        PotionBrewing.Builder builder = event.getBuilder();
-
-        builder.addMix(Potions.AWKWARD, Blocks.DIRT.asItem(), ModPotions.STINKY_POTION);
     }
 
     @SubscribeEvent

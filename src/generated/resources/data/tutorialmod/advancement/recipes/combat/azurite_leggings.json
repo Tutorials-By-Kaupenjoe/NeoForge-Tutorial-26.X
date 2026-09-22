@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_leggings"
+        "recipes": "tutorialmod:azurite_leggings"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

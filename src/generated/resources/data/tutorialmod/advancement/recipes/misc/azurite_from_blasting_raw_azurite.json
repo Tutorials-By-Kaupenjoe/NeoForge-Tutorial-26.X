@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_from_blasting_raw_azurite"
+        "recipes": "tutorialmod:azurite_from_blasting_raw_azurite"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

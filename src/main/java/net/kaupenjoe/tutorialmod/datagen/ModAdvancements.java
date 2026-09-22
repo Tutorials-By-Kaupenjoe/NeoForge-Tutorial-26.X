@@ -16,8 +16,10 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.advancements.AdvancementProvider;
 import net.minecraft.data.advancements.AdvancementSubProvider;
+import net.minecraft.data.worldgen.BootstrapContext;
 import net.minecraft.network.chat.Component;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.Bootstrap;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
@@ -26,18 +28,23 @@ import java.util.function.Consumer;
 import static net.minecraft.advancements.triggers.ItemUsedOnLocationTrigger.TriggerInstance.placedBlock;
 
 public class ModAdvancements extends AdvancementProvider {
-    public ModAdvancements(PackOutput output, CompletableFuture<HolderLookup.Provider> registries) {
-        super(output, registries, List.of(new TutorialModAdvancements()));
+    public ModAdvancements(BootstrapContext<Advancement> context) {
+        super(List.of(TutorialModAdvancements::new));
     }
 
-    public static class TutorialModAdvancements implements AdvancementSubProvider {
+    public static class TutorialModAdvancements extends AdvancementSubProvider {
+        protected TutorialModAdvancements(BootstrapContext<Advancement> output) {
+            super(output);
+        }
+
         @Override
-        public void generate(HolderLookup.Provider registries, Consumer<AdvancementHolder> output) {
-            var items = registries.lookupOrThrow(Registries.ITEM);
+        public void generate() {
+            var items = output.lookup(Registries.ITEM);
+            var blocks = output.lookup(Registries.BLOCK);
 
             AdvancementHolder root = Advancement.Builder.advancement()
-                    .display(
-                            ModItems.AZURITE,
+                    .rootDisplay(
+                            ModItems.AZURITE.get(),
                             Component.translatable("advancements.tutorialmod.root.title"),
                             Component.translatable("advancements.tutorialmod.root.description"),
                             Identifier.withDefaultNamespace("gui/advancements/backgrounds/adventure"),
@@ -52,28 +59,26 @@ public class ModAdvancements extends AdvancementProvider {
             AdvancementHolder plantSeed = Advancement.Builder.advancement()
                     .parent(root)
                     .display(
-                            ModItems.RICE_SHOOT,
+                            ModItems.RICE_SHOOT.get(),
                             Component.translatable("advancements.tutorialmod.plant_custom.title"),
                             Component.translatable("advancements.tutorialmod.plant_custom.description"),
-                            null,
                             AdvancementType.TASK,
                             true,
                             true,
                             false
                     )
                     .requirements(AdvancementRequirements.Strategy.OR)
-                    .addCriterion("berries", placedBlock(ModBlocks.GOJI_BERRY_BUSH.get()))
-                    .addCriterion("rice", placedBlock(ModBlocks.RICE_CROP.get()))
-                    .addCriterion("onion", placedBlock(ModBlocks.ONION_CROP.get()))
+                    .addCriterion("berries", placedBlock(blocks, ModBlocks.GOJI_BERRY_BUSH.get()))
+                    .addCriterion("rice", placedBlock(blocks, ModBlocks.RICE_CROP.get()))
+                    .addCriterion("onion", placedBlock(blocks, ModBlocks.ONION_CROP.get()))
                     .save(output, "tutorialmod/plant_custom");
 
             AdvancementHolder metalDetector = Advancement.Builder.advancement()
                     .parent(plantSeed)
                     .display(
-                            ModItems.METAL_DETECTOR,
+                            ModItems.METAL_DETECTOR.get(),
                             Component.translatable("advancements.tutorialmod.metal_detector.title"),
                             Component.translatable("advancements.tutorialmod.metal_detector.description"),
-                            null,
                             AdvancementType.TASK,
                             true,
                             true,

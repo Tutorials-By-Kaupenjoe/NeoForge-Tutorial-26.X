@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:driftwood_wood"
+        "recipes": "tutorialmod:driftwood_wood"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

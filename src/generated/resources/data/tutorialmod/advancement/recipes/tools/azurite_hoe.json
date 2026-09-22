@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_hoe"
+        "recipes": "tutorialmod:azurite_hoe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

@@ -6,7 +6,7 @@ import com.mojang.serialization.codecs.RecordCodecBuilder;
 import net.minecraft.util.RandomSource;
 import net.minecraft.util.valueproviders.IntProvider;
 import net.minecraft.world.level.WorldGenLevel;
-import net.minecraft.world.level.levelgen.feature.configurations.TreeConfiguration;
+import net.minecraft.world.level.levelgen.feature.TreeFeature;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 
@@ -29,7 +29,7 @@ public class InvertedPyramidFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    protected void createFoliage(WorldGenLevel level, FoliageSetter foliageSetter, RandomSource random, TreeConfiguration config,
+    protected void createFoliage(WorldGenLevel level, FoliageSetter foliageSetter, RandomSource random, TreeFeature config,
                                  int treeHeight, FoliageAttachment foliageAttachment, int foliageHeight, int leafRadius, int offset) {
         for(int i = 0; i < foliageHeight; i++) {
             int currentRadius = leafRadius + i - 1;
@@ -38,7 +38,7 @@ public class InvertedPyramidFoliagePlacer extends FoliagePlacer {
     }
 
     @Override
-    public int foliageHeight(RandomSource random, int treeHeight, TreeConfiguration config) {
+    public int foliageHeight(RandomSource random, int treeHeight, TreeFeature config) {
         return height;
     }
 

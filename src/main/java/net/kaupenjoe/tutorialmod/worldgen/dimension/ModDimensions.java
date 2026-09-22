@@ -24,6 +24,7 @@ import net.minecraft.world.level.dimension.DimensionType;
 import net.minecraft.world.level.dimension.LevelStem;
 import net.minecraft.world.level.levelgen.NoiseBasedChunkGenerator;
 import net.minecraft.world.level.levelgen.NoiseGeneratorSettings;
+import org.joml.Vector4f;
 
 import java.util.List;
 import java.util.Optional;
@@ -57,10 +58,10 @@ public class ModDimensions {
                 DimensionType.Skybox.OVERWORLD,
                 CardinalLighting.Type.DEFAULT,
                 EnvironmentAttributeMap.builder()
-                        .set(EnvironmentAttributes.FOG_COLOR, -6168523)
-                        .set(EnvironmentAttributes.SKY_COLOR, OverworldBiomes.calculateSkyColor(2.5f))
-                        .set(EnvironmentAttributes.AMBIENT_LIGHT_COLOR, -4212331)
-                        .set(EnvironmentAttributes.CLOUD_COLOR, ARGB.color(155, 200, 31, 25))
+                        .set(EnvironmentAttributes.FOG_COLOR, ARGB.vector3fFromRGB24(-6168523))
+                        .set(EnvironmentAttributes.SKY_COLOR, ARGB.vector3fFromRGB24(OverworldBiomes.calculateSkyColor(2.5f)))
+                        .set(EnvironmentAttributes.AMBIENT_LIGHT_COLOR, ARGB.vector3fFromRGB24(-4212331))
+                        .set(EnvironmentAttributes.CLOUD_COLOR, new Vector4f(155, 200, 31, 25))
                         .build(),
                 timelines.getOrThrow(TimelineTags.IN_OVERWORLD),
                 Optional.of(clocks.getOrThrow(WorldClocks.OVERWORLD))));

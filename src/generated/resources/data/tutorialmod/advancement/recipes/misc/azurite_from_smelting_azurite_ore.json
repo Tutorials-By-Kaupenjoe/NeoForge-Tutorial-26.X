@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_from_smelting_azurite_ore"
+        "recipes": "tutorialmod:azurite_from_smelting_azurite_ore"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

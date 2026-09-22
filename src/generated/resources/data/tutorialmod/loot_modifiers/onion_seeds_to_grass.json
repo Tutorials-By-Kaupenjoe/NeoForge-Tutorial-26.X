@@ -1,19 +1,9 @@
 {
   "type": "neoforge:add_table",
-  "conditions": [
-    {
-      "condition": "minecraft:any_of",
-      "terms": [
-        {
-          "block": "minecraft:short_grass",
-          "condition": "minecraft:block_state_property"
-        },
-        {
-          "block": "minecraft:tall_grass",
-          "condition": "minecraft:block_state_property"
-        }
-      ]
-    }
-  ],
+  "condition": {
+    "type": "minecraft:match_block",
+    "blocks": "minecraft:tall_grass"
+  },
+  "priority": 10,
   "table": "tutorialmod:extra/glm/onion_seeds"
 }

@@ -1,10 +1,9 @@
 {
   "type": "neoforge:add_table",
-  "conditions": [
-    {
-      "condition": "neoforge:loot_table_id",
-      "loot_table_id": "minecraft:chests/jungle_temple"
-    }
-  ],
+  "condition": {
+    "type": "neoforge:loot_table_id",
+    "loot_table_id": "minecraft:chests/jungle_temple"
+  },
+  "priority": 10,
   "table": "tutorialmod:extra/glm/metal_detector_found"
 }

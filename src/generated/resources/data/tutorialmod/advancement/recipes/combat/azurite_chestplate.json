@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_chestplate"
+        "recipes": "tutorialmod:azurite_chestplate"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

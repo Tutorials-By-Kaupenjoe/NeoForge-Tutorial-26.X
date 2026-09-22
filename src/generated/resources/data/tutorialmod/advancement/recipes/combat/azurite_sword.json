@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_sword"
+        "recipes": "tutorialmod:azurite_sword"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

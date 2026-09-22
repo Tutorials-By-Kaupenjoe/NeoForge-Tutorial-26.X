@@ -23,6 +23,7 @@ import net.minecraft.client.renderer.item.ItemModel;
 import net.minecraft.client.renderer.item.properties.conditional.HasComponent;
 import net.minecraft.data.PackOutput;
 
+import java.util.Map;
 import java.util.Optional;
 
 public class ModModelProvider extends ModelProvider {
@@ -45,10 +46,8 @@ public class ModModelProvider extends ModelProvider {
         itemModels.generateFlatItem(ModItems.AZURITE_HOE.get(), ModelTemplates.FLAT_HANDHELD_ITEM);
         itemModels.generateSpear(ModItems.AZURITE_SPEAR.get());
 
-        itemModels.generateTrimmableItem(ModItems.AZURITE_HELMET.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_HELMET, false);
-        itemModels.generateTrimmableItem(ModItems.AZURITE_CHESTPLATE.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_CHESTPLATE, false);
-        itemModels.generateTrimmableItem(ModItems.AZURITE_LEGGINGS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_LEGGINGS, false);
-        itemModels.generateTrimmableItem(ModItems.AZURITE_BOOTS.get(), ModArmorMaterials.AZURITE_KEY, ItemModelGenerators.TRIM_PREFIX_BOOTS, false);
+        itemModels.generateTrimmableArmorSet(ModItems.AZURITE_HELMET.get(), ModItems.AZURITE_CHESTPLATE.get(), ModItems.AZURITE_LEGGINGS.get(), ModItems.AZURITE_BOOTS.get(),
+                false, Map.of());
 
         itemModels.generateFlatItem(ModItems.AZURITE_HORSE_ARMOR.get(), ModelTemplates.FLAT_ITEM);
 

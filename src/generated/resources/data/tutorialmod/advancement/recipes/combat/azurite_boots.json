@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_boots"
+        "recipes": "tutorialmod:azurite_boots"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

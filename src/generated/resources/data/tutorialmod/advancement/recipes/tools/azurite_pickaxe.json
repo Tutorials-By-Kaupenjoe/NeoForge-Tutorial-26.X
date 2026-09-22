@@ -23,7 +23,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_pickaxe"
+        "recipes": "tutorialmod:azurite_pickaxe"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

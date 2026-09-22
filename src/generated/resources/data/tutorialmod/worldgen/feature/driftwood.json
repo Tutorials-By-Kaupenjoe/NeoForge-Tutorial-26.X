@@ -1,0 +1,38 @@
+{
+  "type": "minecraft:tree",
+  "below_trunk_provider": {
+    "id": "minecraft:dirt"
+  },
+  "decorators": [],
+  "foliage_placer": {
+    "type": "tutorialmod:inverted_pyramid_foliage_placer",
+    "height": 3,
+    "offset": 1,
+    "radius": 1
+  },
+  "foliage_provider": {
+    "id": "tutorialmod:driftwood_leaves",
+    "properties": {
+      "distance": "7",
+      "persistent": "false",
+      "waterlogged": "false"
+    }
+  },
+  "ignore_vines": false,
+  "minimum_size": {
+    "type": "minecraft:two_layers_feature_size",
+    "upper_size": 2
+  },
+  "trunk_placer": {
+    "type": "tutorialmod:spiral_trunk_placer",
+    "base_height": 4,
+    "height_rand_a": 3,
+    "height_rand_b": 4
+  },
+  "trunk_provider": {
+    "id": "tutorialmod:driftwood_log",
+    "properties": {
+      "axis": "y"
+    }
+  }
+}

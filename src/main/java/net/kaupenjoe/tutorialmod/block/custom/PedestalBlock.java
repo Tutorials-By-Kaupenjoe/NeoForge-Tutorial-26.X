@@ -6,6 +6,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.network.chat.Component;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.sounds.SoundSource;
+import net.minecraft.util.Prediction;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.SimpleMenuProvider;
@@ -26,15 +27,9 @@ import org.jspecify.annotations.Nullable;
 
 public class PedestalBlock extends BaseEntityBlock {
     public static final VoxelShape SHAPE = Block.box(2, 0, 2, 14, 13, 14);
-    public static final MapCodec<PedestalBlock> CODEC = simpleCodec(PedestalBlock::new);
 
     public PedestalBlock(Properties properties) {
         super(properties);
-    }
-
-    @Override
-    protected MapCodec<? extends BaseEntityBlock> codec() {
-        return CODEC;
     }
 
     @Override
@@ -80,7 +75,7 @@ public class PedestalBlock extends BaseEntityBlock {
                 pedestalBlockEntity.clearContents();
 
                 if(!player.getInventory().add(stackOnPedestal)) {
-                    player.drop(stackOnPedestal, false);
+                    player.drop(stackOnPedestal, false, Prediction.SERVER_ONLY);
                 }
 
                 level.playSound(player, pos, SoundEvents.ITEM_PICKUP, SoundSource.BLOCKS, 1f, 1f);

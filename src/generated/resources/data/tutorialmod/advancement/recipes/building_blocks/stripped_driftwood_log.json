@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:stripped_driftwood_log"
+        "recipes": "tutorialmod:stripped_driftwood_log"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

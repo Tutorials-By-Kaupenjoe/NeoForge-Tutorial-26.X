@@ -17,6 +17,7 @@ import net.minecraft.world.item.TooltipFlag;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
+import net.minecraft.world.level.block.sounds.AmbientLeavesBlockSoundPlayer;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.properties.BlockSetType;
@@ -71,10 +72,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AZURITE_PRESSURE_PLATE = registerBlock("azurite_pressure_plate",
             properties -> new PressurePlateBlock(BlockSetType.IRON, properties
                     .mapColor(MapColor.COLOR_BLUE).forceSolidOn().instrument(NoteBlockInstrument.BASS)
-                    .requiresCorrectToolForDrops().noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
+                    .requiresCorrectToolForDrops().noCollision().strength(0.5F).pushReaction(PushReaction.POPPED)));
     public static final DeferredBlock<Block> AZURITE_BUTTON = registerBlock("azurite_button",
             properties -> new ButtonBlock(BlockSetType.IRON, 20, properties
-                    .noCollision().strength(0.5F).pushReaction(PushReaction.DESTROY)));
+                    .noCollision().strength(0.5F).pushReaction(PushReaction.POPPED)));
 
     public static final DeferredBlock<Block> AZURITE_FENCE = registerBlock("azurite_fence",
             properties -> new FenceBlock(properties.strength(2F)
@@ -102,15 +103,15 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> ONION_CROP = BLOCKS.registerBlock("onion_crop",
             properties -> new OnionCropBlock(properties.randomTicks().sound(SoundType.CROP)
-                    .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
+                    .instabreak().noCollision().pushReaction(PushReaction.POPPED)));
 
     public static final DeferredBlock<Block> GOJI_BERRY_BUSH = BLOCKS.registerBlock("goji_berry_bush",
             properties -> new GojiBerryBushBlock(properties.randomTicks().sound(SoundType.SWEET_BERRY_BUSH)
-                    .noCollision().pushReaction(PushReaction.DESTROY)));
+                    .noCollision().pushReaction(PushReaction.POPPED)));
 
     public static final DeferredBlock<Block> RICE_CROP = BLOCKS.registerBlock("rice_crop",
             properties -> new RiceCropBlock(properties.randomTicks().sound(SoundType.CROP)
-                    .instabreak().noCollision().pushReaction(PushReaction.DESTROY)));
+                    .instabreak().noCollision().pushReaction(PushReaction.POPPED)));
 
     public static final DeferredBlock<Block> CRYSTALLIZER = registerBlock("crystallizer",
             properties -> new CrystallizerBlock(properties.strength(2F).requiresCorrectToolForDrops()));
@@ -148,9 +149,9 @@ public class ModBlocks {
                 }
             });
     public static final DeferredBlock<Block> DRIFTWOOD_LEAVES = registerBlock("driftwood_leaves",
-            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES,
+            properties -> new UntintedParticleLeavesBlock(0.01f, ParticleTypes.CHERRY_LEAVES, AmbientLeavesBlockSoundPlayer.noAmbientSound(),
                     properties.mapColor(MapColor.METAL).strength(0.2F).randomTicks().sound(SoundType.GRASS)
-                            .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).ignitedByLava().pushReaction(PushReaction.DESTROY)) {
+                            .noOcclusion().isValidSpawn(Blocks::ocelotOrParrot).ignitedByLava().pushReaction(PushReaction.POPPED)) {
                 @Override
                 public boolean isFlammable(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
                     return true;
@@ -170,10 +171,10 @@ public class ModBlocks {
     public static final DeferredBlock<Block> DRIFTWOOD_SAPLING = registerBlock("driftwood_sapling",
             properties -> new SaplingBlock(ModTreeGrowers.DRIFTWOOD, properties.mapColor(MapColor.PLANT)
                     .noCollision().randomTicks().instabreak().sound(SoundType.GRASS)
-                    .pushReaction(PushReaction.DESTROY)));
+                    .pushReaction(PushReaction.POPPED)));
     public static final DeferredBlock<Block> POTTED_DRIFTWOOD_SAPLING = BLOCKS.registerBlock("potted_driftwood_sapling",
             properties -> new FlowerPotBlock(() -> ((FlowerPotBlock) Blocks.FLOWER_POT), DRIFTWOOD_SAPLING, properties
-                    .instabreak().noOcclusion().pushReaction(PushReaction.DESTROY)));
+                    .instabreak().noOcclusion().pushReaction(PushReaction.POPPED)));
 
     public static final DeferredBlock<Block> KAUPEN_PORTAL = registerBlock("kaupen_portal",
             properties -> new KaupenPortalBlock(properties.strength(3f)));

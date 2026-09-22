@@ -1,29 +1,25 @@
 {
   "pools": [
     {
-      "conditions": [
-        {
-          "chance": 1.0,
-          "condition": "minecraft:random_chance"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:random_chance",
+        "chance": 1.0
+      },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "tutorialmod:metal_detector"
         }
       ],
-      "functions": [
-        {
-          "count": {
-            "type": "minecraft:uniform",
-            "max": 2.0,
-            "min": 1.0
-          },
-          "function": "minecraft:set_count"
+      "modifier": {
+        "type": "minecraft:set_count",
+        "count": {
+          "type": "minecraft:uniform",
+          "max": 2,
+          "min": 1
         }
-      ],
-      "rolls": 1.0
+      },
+      "rolls": 1
     }
   ],
   "random_sequence": "tutorialmod:extra/glm/metal_detector_found"

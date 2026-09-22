@@ -1,19 +1,17 @@
 {
   "pools": [
     {
-      "conditions": [
-        {
-          "chance": 0.25,
-          "condition": "minecraft:random_chance"
-        }
-      ],
+      "condition": {
+        "type": "minecraft:random_chance",
+        "chance": 0.25
+      },
       "entries": [
         {
           "type": "minecraft:item",
           "name": "tutorialmod:onion_seeds"
         }
       ],
-      "rolls": 1.0
+      "rolls": 1
     }
   ],
   "random_sequence": "tutorialmod:extra/glm/onion_seeds"

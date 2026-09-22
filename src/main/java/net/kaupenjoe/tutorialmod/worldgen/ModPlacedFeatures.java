@@ -11,7 +11,7 @@ import net.minecraft.data.worldgen.placement.VegetationPlacements;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.level.levelgen.VerticalAnchor;
-import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
+import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
@@ -28,23 +28,23 @@ public class ModPlacedFeatures {
     public static final ResourceKey<PlacedFeature> GOJI_BERRY_BUSH_PLACED_KEY = registerKey("goji_berry_bush_placed");
 
     public static void bootstrap(BootstrapContext<PlacedFeature> context) {
-        var configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
+        var features = context.lookup(Registries.FEATURE);
 
-        register(context, OVERWORLD_AZURITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.OVERWORLD_AZURITE_ORE_KEY),
+        register(context, OVERWORLD_AZURITE_ORE_PLACED_KEY, features.getOrThrow(ModFeatures.OVERWORLD_AZURITE_ORE_KEY),
                 OrePlacements.commonOrePlacement(12,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-        register(context, NETHER_AZURITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.NETHER_AZURITE_ORE_KEY),
+        register(context, NETHER_AZURITE_ORE_PLACED_KEY, features.getOrThrow(ModFeatures.NETHER_AZURITE_ORE_KEY),
                 OrePlacements.commonOrePlacement(12,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
-        register(context, END_AZURITE_ORE_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.END_AZURITE_ORE_KEY),
+        register(context, END_AZURITE_ORE_PLACED_KEY, features.getOrThrow(ModFeatures.END_AZURITE_ORE_KEY),
                 OrePlacements.commonOrePlacement(12,
                         HeightRangePlacement.triangle(VerticalAnchor.absolute(-64), VerticalAnchor.absolute(80))));
 
-        register(context, DRIFTWOOD_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.DRIFTWOOD_KEY),
+        register(context, DRIFTWOOD_PLACED_KEY, features.getOrThrow(ModFeatures.DRIFTWOOD_KEY),
                 VegetationPlacements.treePlacement(PlacementUtils.countExtra(3, 0.1f, 2),
                         ModBlocks.DRIFTWOOD_SAPLING.get()));
 
-        register(context, GOJI_BERRY_BUSH_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.GOJI_BERRY_BUSH_KEY),
+        register(context, GOJI_BERRY_BUSH_PLACED_KEY, features.getOrThrow(ModFeatures.GOJI_BERRY_BUSH_KEY),
                 List.of(RarityFilter.onAverageOnceEvery(32), InSquarePlacement.spread(), PlacementUtils.HEIGHTMAP_WORLD_SURFACE, BiomeFilter.biome()));
     }
 
@@ -53,7 +53,7 @@ public class ModPlacedFeatures {
     }
 
     private static void register(BootstrapContext<PlacedFeature> context, ResourceKey<PlacedFeature> key,
-                                 Holder<ConfiguredFeature<?, ?>> configuration, List<PlacementModifier> modifiers) {
+                                 Holder<Feature> configuration, List<PlacementModifier> modifiers) {
         context.register(key, new PlacedFeature(configuration, List.copyOf(modifiers)));
     }
 }

@@ -13,7 +13,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "tutorialmod:azurite_wall"
+        "recipes": "tutorialmod:azurite_wall"
       },
       "trigger": "minecraft:recipe_unlocked"
     }

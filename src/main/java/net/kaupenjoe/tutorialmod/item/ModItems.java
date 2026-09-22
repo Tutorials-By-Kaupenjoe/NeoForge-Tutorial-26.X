@@ -13,6 +13,8 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.world.item.*;
 import net.minecraft.world.item.component.TooltipDisplay;
 import net.minecraft.world.item.equipment.ArmorType;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProvider;
+import net.minecraft.world.level.storage.loot.providers.number.ints.ContextIntProviders;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -29,7 +31,7 @@ public class ModItems {
             properties -> new MetalDetectorItem(properties.durability(64)));
 
     public static final DeferredItem<Item> ONION = ITEMS.registerItem("onion",
-            properties -> new Item(properties.food(ModFoods.ONION, ModFoods.ONION_CONSUMABLE)) {
+            properties -> new Item(properties.food(ModFoods.ONION, ModFoods.ONION_CONSUMABLE).compostable(ContextIntProviders.COMPOSTABLE_MEDIUM_HIGH)) {
                 @Override
                 public void appendHoverText(ItemStack itemStack, TooltipContext context, TooltipDisplay display, Consumer<Component> builder, TooltipFlag tooltipFlag) {
                     builder.accept(Component.translatable("tooltip.tutorialmod.onion.tooltip"));
@@ -38,18 +40,18 @@ public class ModItems {
             });
 
     public static final DeferredItem<Item> END_FIRE_STARTER = ITEMS.registerItem("end_fire_starter",
-            properties -> new Item(properties.stacksTo(32)));
+            properties -> new Item(properties.stacksTo(32).cookingFuel(ContextIntProviders.COOKING_TIME_COAL_BLOCK)));
 
     public static final DeferredItem<Item> AZURITE_SWORD = ITEMS.registerItem("azurite_sword",
             properties -> new Item(properties.sword(ModToolTiers.AZURITE, 3, -2.4f)));
     public static final DeferredItem<Item> AZURITE_PICKAXE = ITEMS.registerItem("azurite_pickaxe",
             properties -> new Item(properties.pickaxe(ModToolTiers.AZURITE, 1, -2.8f)));
     public static final DeferredItem<Item> AZURITE_SHOVEL = ITEMS.registerItem("azurite_shovel",
-            properties -> new ShovelItem(ModToolTiers.AZURITE, 1.5f, -3.0f, properties));
+            properties -> new Item(properties.shovel(ModToolTiers.AZURITE, 1.5f, -3.0f)));
     public static final DeferredItem<Item> AZURITE_AXE = ITEMS.registerItem("azurite_axe",
-            properties -> new AxeItem(ModToolTiers.AZURITE, 6, -3.2f, properties));
+            properties -> new Item(properties.axe(ModToolTiers.AZURITE, 6, -3.2f)));
     public static final DeferredItem<Item> AZURITE_HOE = ITEMS.registerItem("azurite_hoe",
-            properties -> new HoeItem(ModToolTiers.AZURITE, 0, -3.0f, properties));
+            properties -> new Item(properties.hoe(ModToolTiers.AZURITE, 0, -3.0f)));
     public static final DeferredItem<Item> AZURITE_SPEAR = ITEMS.registerItem("azurite_spear",
             properties -> new Item(properties.spear(ModToolTiers.AZURITE, 0.95f, 0.7f, 0.7f,
                     3.5f, 13f, 8.5f, 5.1f, 13.37f, 4.67f)));
@@ -76,7 +78,7 @@ public class ModItems {
             properties -> new Item(properties.stacksTo(1)));
 
     public static final DeferredItem<Item> ONION_SEEDS = ITEMS.registerItem("onion_seeds",
-            properties -> new BlockItem(ModBlocks.ONION_CROP.get(), properties));
+            properties -> new BlockItem(ModBlocks.ONION_CROP.get(), properties.compostable(ContextIntProviders.COMPOSTABLE_LOW)));
     public static final DeferredItem<Item> GOJI_BERRIES = ITEMS.registerItem("goji_berries",
             properties -> new BlockItem(ModBlocks.GOJI_BERRY_BUSH.get(), properties.food(ModFoods.GOJI_BERRIES)));
 

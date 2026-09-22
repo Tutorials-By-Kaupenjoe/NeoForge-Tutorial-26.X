@@ -1,5 +1,6 @@
 {
   "type": "minecraft:blasting",
+  "cookingtime": 100,
   "experience": 0.25,
   "group": "azurite",
   "ingredient": "tutorialmod:azurite_deepslate_ore",
