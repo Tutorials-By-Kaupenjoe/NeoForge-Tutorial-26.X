@@ -9,6 +9,7 @@ import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
 import net.kaupenjoe.tutorialmod.menu.custom.CrystallizerScreen;
 import net.kaupenjoe.tutorialmod.menu.custom.PedestalScreen;
+import net.kaupenjoe.tutorialmod.menu.custom.WarturtleScreen;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.entity.EntityRenderers;
@@ -90,5 +91,6 @@ public class TutorialModClient {
     public static void registerScreens(RegisterMenuScreensEvent event) {
         event.register(ModMenuTypes.PEDESTAL_MENU.get(), PedestalScreen::new);
         event.register(ModMenuTypes.CRYSTALLIZER_MENU.get(), CrystallizerScreen::new);
+        event.register(ModMenuTypes.WARTURTLE_MENU.get(), WarturtleScreen::new);
     }
 }
