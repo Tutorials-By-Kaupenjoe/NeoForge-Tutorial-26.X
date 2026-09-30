@@ -9,4 +9,7 @@ public class WarturtleRenderState extends LivingEntityRenderState {
     public final AnimationState emergeAnimationState = new AnimationState();
     public final AnimationState sittingAnimationState = new AnimationState();
 
+    public boolean hasTier1Chest = false;
+    public boolean hasTier2Chest = false;
+    public boolean hasTier3Chest = false;
 }

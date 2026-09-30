@@ -44,5 +44,8 @@ public class WarturtleRenderer extends MobRenderer<WarturtleEntity, WarturtleRen
         state.hidingAnimationState.copyFrom(entity.sittingTransitionAnimationState);
         state.emergeAnimationState.copyFrom(entity.standingTransitionAnimationState);
 
+        state.hasTier1Chest = entity.hasTier1Chest();
+        state.hasTier2Chest = entity.hasTier2Chest();
+        state.hasTier3Chest = entity.hasTier3Chest();
     }
 }
