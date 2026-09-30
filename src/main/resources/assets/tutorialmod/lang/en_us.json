@@ -39,6 +39,7 @@
   "item.tutorialmod.radiation_staff": "Radiation Staff",
 
   "item.tutorialmod.dodo_spawn_egg": "Dodo Spawn Egg",
+  "item.tutorialmod.warturtle_spawn_egg": "Warturtle Spawn Egg",
 
 
   "block.tutorialmod.azurite_block": "Block of Azurite",
@@ -117,6 +118,7 @@
   "key.tutorialmod.kaupen": "Kaupen Key",
 
   "entity.tutorialmod.dodo": "Dodo",
+  "entity.tutorialmod.warturtle": "Warturtle",
 
   "advancements.tutorialmod.root.title": "TutorialMod Advancements",
   "advancements.tutorialmod.root.description": "TutorialMod Advancements Pretty Cool!",

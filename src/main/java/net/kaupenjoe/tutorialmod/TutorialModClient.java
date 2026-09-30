@@ -3,9 +3,7 @@ package net.kaupenjoe.tutorialmod;
 import net.kaupenjoe.tutorialmod.block.entity.ModBlockEntities;
 import net.kaupenjoe.tutorialmod.block.entity.renderer.PedestalBlockEntityRenderer;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
-import net.kaupenjoe.tutorialmod.entity.client.DodoModel;
-import net.kaupenjoe.tutorialmod.entity.client.DodoRenderer;
-import net.kaupenjoe.tutorialmod.entity.client.ModModelLayerLocations;
+import net.kaupenjoe.tutorialmod.entity.client.*;
 import net.kaupenjoe.tutorialmod.item.ModItems;
 import net.kaupenjoe.tutorialmod.keymapping.ModKeyMappings;
 import net.kaupenjoe.tutorialmod.menu.ModMenuTypes;
@@ -44,11 +42,13 @@ public class TutorialModClient {
     @SubscribeEvent
     static void onClientSetup(FMLClientSetupEvent event) {
         EntityRenderers.register(ModEntities.DODO.get(), DodoRenderer::new);
+        EntityRenderers.register(ModEntities.WARTURTLE.get(), WarturtleRenderer::new);
     }
 
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(ModModelLayerLocations.DODO, DodoModel::createBodyLayer);
+        event.registerLayerDefinition(ModModelLayerLocations.WARTURTLE, WarturtleModel::createBodyLayer);
     }
 
     @SubscribeEvent

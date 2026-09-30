@@ -7,4 +7,7 @@ import net.minecraft.resources.Identifier;
 public class ModModelLayerLocations {
     public static final ModelLayerLocation DODO =
             new ModelLayerLocation(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "dodo"), "main");
+
+    public static final ModelLayerLocation WARTURTLE =
+            new ModelLayerLocation(Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "warturtle"), "main");
 }

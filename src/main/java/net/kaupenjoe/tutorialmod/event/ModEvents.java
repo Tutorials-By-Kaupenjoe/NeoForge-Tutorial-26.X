@@ -3,6 +3,7 @@ package net.kaupenjoe.tutorialmod.event;
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.entity.custom.DodoEntity;
+import net.kaupenjoe.tutorialmod.entity.custom.WarturtleEntity;
 import net.kaupenjoe.tutorialmod.networking.ClientPayloadHandler;
 import net.kaupenjoe.tutorialmod.networking.packet.TestPacketC2S;
 import net.minecraft.network.chat.Component;
@@ -47,6 +48,7 @@ public class ModEvents {
     @SubscribeEvent
     public static void registerAttributes(EntityAttributeCreationEvent event) {
         event.put(ModEntities.DODO.get(), DodoEntity.createAttributes().build());
+        event.put(ModEntities.WARTURTLE.get(), WarturtleEntity.createAttributes().build());
     }
 
     @SubscribeEvent

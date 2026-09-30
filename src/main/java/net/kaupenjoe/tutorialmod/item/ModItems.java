@@ -93,6 +93,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> DODO_SPAWN_EGG = ITEMS.registerItem("dodo_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.DODO.get())));
+    public static final DeferredItem<Item> WARTURTLE_SPAWN_EGG = ITEMS.registerItem("warturtle_spawn_egg",
+            properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.WARTURTLE.get())));
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

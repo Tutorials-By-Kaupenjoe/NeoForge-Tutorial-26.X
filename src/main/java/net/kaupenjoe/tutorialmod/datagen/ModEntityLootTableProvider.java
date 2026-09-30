@@ -36,7 +36,7 @@ public class ModEntityLootTableProvider extends EntityLootSubProvider {
                                 .apply(EnchantedCountIncreaseFunction.lootingMultiplier(enchantments, ContextFloatProviders.between(1, 3))))
                         .when(LootItemKilledByPlayerCondition.killedByPlayer())));
 
-        // add(ModEntities.NO_LOOTTABLE.get(), LootTable.lootTable());
+        add(ModEntities.WARTURTLE.get(), LootTable.lootTable());
     }
 
     @Override

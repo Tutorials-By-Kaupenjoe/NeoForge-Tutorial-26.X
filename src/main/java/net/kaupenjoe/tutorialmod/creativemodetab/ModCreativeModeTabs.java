@@ -57,6 +57,7 @@ public class ModCreativeModeTabs {
                         output.accept(ModItems.RADIATION_STAFF);
 
                         output.accept(ModItems.DODO_SPAWN_EGG);
+                        output.accept(ModItems.WARTURTLE_SPAWN_EGG);
 
 
                     }).build());

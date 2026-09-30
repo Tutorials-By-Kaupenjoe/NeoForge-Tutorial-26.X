@@ -2,6 +2,7 @@ package net.kaupenjoe.tutorialmod.entity;
 
 import net.kaupenjoe.tutorialmod.TutorialMod;
 import net.kaupenjoe.tutorialmod.entity.custom.DodoEntity;
+import net.kaupenjoe.tutorialmod.entity.custom.WarturtleEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.resources.ResourceKey;
@@ -18,10 +19,14 @@ public class ModEntities {
 
     public static final ResourceKey<EntityType<?>> DODO_KEY = ResourceKey.create(Registries.ENTITY_TYPE,
             Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "dodo"));
+    public static final ResourceKey<EntityType<?>> WARTURTLE_KEY = ResourceKey.create(Registries.ENTITY_TYPE,
+            Identifier.fromNamespaceAndPath(TutorialMod.MOD_ID, "warturtle"));
 
 
     public static final Supplier<EntityType<DodoEntity>> DODO = ENTITY_TYPES.register("dodo",
             () -> EntityType.Builder.of(DodoEntity::new, MobCategory.CREATURE).sized(1f, 2.5f).build(DODO_KEY));
+    public static final Supplier<EntityType<WarturtleEntity>> WARTURTLE = ENTITY_TYPES.register("warturtle",
+            () -> EntityType.Builder.of(WarturtleEntity::new, MobCategory.CREATURE).sized(2.5f, 1.5f).build(WARTURTLE_KEY));
 
 
     public static void register(IEventBus eventBus) {
