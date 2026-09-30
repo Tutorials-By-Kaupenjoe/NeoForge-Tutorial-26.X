@@ -6,6 +6,7 @@ import net.kaupenjoe.tutorialmod.entity.ModEntities;
 import net.kaupenjoe.tutorialmod.food.ModFoods;
 import net.kaupenjoe.tutorialmod.item.custom.DataTabletItem;
 import net.kaupenjoe.tutorialmod.item.custom.MetalDetectorItem;
+import net.kaupenjoe.tutorialmod.item.custom.WarturtleArmorItem;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.network.chat.Component;
@@ -95,6 +96,19 @@ public class ModItems {
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.DODO.get())));
     public static final DeferredItem<Item> WARTURTLE_SPAWN_EGG = ITEMS.registerItem("warturtle_spawn_egg",
             properties -> new SpawnEggItem(properties.spawnEgg(ModEntities.WARTURTLE.get())));
+
+    public static final DeferredItem<Item> IRON_WARTURTLE_ARMOR = ITEMS.registerItem("iron_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(200)));
+    public static final DeferredItem<Item> GOLD_WARTURTLE_ARMOR = ITEMS.registerItem("gold_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(400)));
+    public static final DeferredItem<Item> DIAMOND_WARTURTLE_ARMOR = ITEMS.registerItem("diamond_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(600)));
+    public static final DeferredItem<Item> NETHERITE_WARTURTLE_ARMOR = ITEMS.registerItem("netherite_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(800)));
+    public static final DeferredItem<Item> AZURITE_WARTURTLE_ARMOR = ITEMS.registerItem("azurite_warturtle_armor",
+            properties -> new WarturtleArmorItem(properties.durability(1000)));
+
+
 
     public static ResourceKey<Item> getRK(Item item) {
         return BuiltInRegistries.ITEM.getResourceKey(item).get();

@@ -41,6 +41,12 @@
   "item.tutorialmod.dodo_spawn_egg": "Dodo Spawn Egg",
   "item.tutorialmod.warturtle_spawn_egg": "Warturtle Spawn Egg",
 
+  "item.tutorialmod.iron_warturtle_armor": "Iron Warturtle Armor",
+  "item.tutorialmod.gold_warturtle_armor": "Gold Warturtle Armor",
+  "item.tutorialmod.diamond_warturtle_armor": "Diamond Warturtle Armor",
+  "item.tutorialmod.netherite_warturtle_armor": "Netherite Warturtle Armor",
+  "item.tutorialmod.azurite_warturtle_armor": "Azurite Warturtle Armor",
+
 
   "block.tutorialmod.azurite_block": "Block of Azurite",
   "block.tutorialmod.raw_azurite_block": "Block of Raw Azurite",
