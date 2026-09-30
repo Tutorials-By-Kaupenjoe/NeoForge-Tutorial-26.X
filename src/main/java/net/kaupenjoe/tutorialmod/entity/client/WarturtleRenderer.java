@@ -50,5 +50,6 @@ public class WarturtleRenderer extends MobRenderer<WarturtleEntity, WarturtleRen
         state.hasTier3Chest = entity.hasTier3Chest();
 
         state.armorItem = entity.getBodyArmorItem();
+        state.dyeColor = entity.getSwag();
     }
 }
