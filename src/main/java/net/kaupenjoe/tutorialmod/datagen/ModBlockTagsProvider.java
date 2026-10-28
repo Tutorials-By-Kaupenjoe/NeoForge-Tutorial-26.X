@@ -72,16 +72,16 @@ public class ModBlockTagsProvider extends BlockTagsProvider {
                 .add(ModBlocks.getRK(ModBlocks.ONION_CROP.get()));
 
         tag(BlockTags.LEAVES)
-                .add(ModBlocks.DRIFTWOOD_LEAVES.getKey());
+                .add(ModBlocks.DRIFTWOOD_LEAVES.key());
         tag(BlockTags.PLANKS)
-                .add(ModBlocks.DRIFTWOOD_PLANKS.getKey());
+                .add(ModBlocks.DRIFTWOOD_PLANKS.key());
         tag(BlockItemTags.LOGS_THAT_BURN.block())
-                .add(ModBlocks.DRIFTWOOD_LOG.getKey())
-                .add(ModBlocks.DRIFTWOOD_WOOD.getKey())
-                .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG.getKey())
-                .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.getKey());
+                .add(ModBlocks.DRIFTWOOD_LOG.key())
+                .add(ModBlocks.DRIFTWOOD_WOOD.key())
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_LOG.key())
+                .add(ModBlocks.STRIPPED_DRIFTWOOD_WOOD.key());
 
         tag(BlockTags.FLOWER_POTS)
-                .add(ModBlocks.POTTED_DRIFTWOOD_SAPLING.getKey());
+                .add(ModBlocks.POTTED_DRIFTWOOD_SAPLING.key());
     }
 }
