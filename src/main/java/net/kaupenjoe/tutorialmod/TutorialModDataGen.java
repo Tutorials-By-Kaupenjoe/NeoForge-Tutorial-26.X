@@ -8,6 +8,7 @@ import net.kaupenjoe.tutorialmod.datagen.villager.ModVillagerTrades;
 import net.kaupenjoe.tutorialmod.worldgen.ModBiomeModifiers;
 import net.kaupenjoe.tutorialmod.worldgen.ModFeatures;
 import net.kaupenjoe.tutorialmod.worldgen.ModPlacedFeatures;
+import net.kaupenjoe.tutorialmod.worldgen.biome.ModBiomes;
 import net.kaupenjoe.tutorialmod.worldgen.dimension.ModDimensions;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.DataGenerator;
@@ -40,6 +41,7 @@ public class TutorialModDataGen {
                 .add(Registries.DIMENSION_TYPE, ModDimensions::bootstrapType)
                 .add(Registries.LEVEL_STEM, ModDimensions::bootstrapStem)
                 .add(Registries.BLOCK_TRANSFORMER, ModBlockTransformers::bootstrap)
+                .add(Registries.BIOME, ModBiomes::bootstrap)
 
                 .add(Registries.LOOT_TABLE, new LootTableProvider(Set.of(), List.of(
                         new LootTableProvider.SubProviderEntry(ModBlockLootTableProvider::new, LootContextParamSets.BLOCK),

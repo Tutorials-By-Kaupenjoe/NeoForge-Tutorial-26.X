@@ -14,6 +14,9 @@ import net.kaupenjoe.tutorialmod.recipe.ModRecipes;
 import net.kaupenjoe.tutorialmod.sound.ModSounds;
 import net.kaupenjoe.tutorialmod.stat.ModStats;
 import net.kaupenjoe.tutorialmod.villager.ModVillagers;
+import net.kaupenjoe.tutorialmod.worldgen.biome.ModBiomes;
+import net.kaupenjoe.tutorialmod.worldgen.biome.ModEndBiomes;
+import net.kaupenjoe.tutorialmod.worldgen.biome.ModMaterialRules;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModFoliagePlacerTypes;
 import net.kaupenjoe.tutorialmod.worldgen.tree.ModTrunkPlacerTypes;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -27,6 +30,7 @@ import net.neoforged.neoforge.common.NeoForge;
 import net.neoforged.neoforge.event.BuildCreativeModeTabContentsEvent;
 import net.neoforged.neoforge.event.server.ServerStartingEvent;
 import org.slf4j.Logger;
+import terrablender.api.MaterialRuleManager;
 
 // The value here should match an entry in the META-INF/neoforge.mods.toml file
 @Mod(TutorialMod.MOD_ID)
@@ -73,7 +77,13 @@ public class TutorialMod {
     }
 
     private void commonSetup(FMLCommonSetupEvent event) {
+        event.enqueueWork(() -> {
+            ModBiomes.registerBiomes();
 
+            MaterialRuleManager.addRules(MaterialRuleManager.RuleCategory.OVERWORLD, MOD_ID, ModMaterialRules::makeModOverworldRules);
+            MaterialRuleManager.addRules(MaterialRuleManager.RuleCategory.NETHER, MOD_ID, ModMaterialRules::makeModNetherRules);
+            MaterialRuleManager.addRules(MaterialRuleManager.RuleCategory.END, MOD_ID, ModMaterialRules::makeModEndRules);
+        });
     }
 
     // Add the example block item to the building blocks tab
